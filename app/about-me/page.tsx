@@ -18,14 +18,14 @@ const AboutMe = () => {
                     width={600}
                     height={600}
                     alt="Tools for haircut"
-                    className="mx-auto md:m-0"
+                    className="mx-auto md:m-0 w-auto h-auto"
                 />
                 <Image
                     src="/images/about-me/bg3.webp"
                     width={600}
                     height={600}
                     alt="Tools for haircut"
-                    className="mx-auto md:m-0 order-last md:order-none"
+                    className="mx-auto md:m-0 order-last md:order-none w-auto h-auto"
                 />
                 <div className="flex flex-col items-center gap-5">
                     <p className="text-t-sm-regular">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur quas rerum, beatae a nihil fugit. Similique, voluptate excepturi adipisci voluptates esse nemo hic. Eius beatae tenetur nobis obcaecati! Ab, nemo. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores, aspernatur accusantium alias nihil ex dolorum perferendis temporibus nostrum molestias laudantium saepe? Hic exercitationem ad delectus blanditiis aperiam. Repudiandae, voluptatibus temporibus.</p>

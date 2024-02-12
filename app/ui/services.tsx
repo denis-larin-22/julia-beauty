@@ -33,7 +33,7 @@ const Services = () => {
 
     return (
         <>
-            <div className="max-w-t-maxScreen h-40 sm:h-64 mx-auto bg-[url('/images/transition-1.jpg')] bg-fixed bg-cover bg-center brightness-75"></div>
+            <div className="max-w-t-maxScreen h-40 sm:h-64 mx-auto bg-[url('/images/transition-1.jpg')] bg-fixed bg-contain sm:bg-cover bg-center brightness-75"></div>
             <section className="container flex flex-col items-center my-6">
                 <p className="uppercase text-t-lg lg:mt-12">nossos</p>
                 <h2 className="uppercase text-t-xl text-t-brown mb-14">serviços</h2>
@@ -59,7 +59,7 @@ const Services = () => {
                 </ul>
             </section>
 
-            <div className="max-w-t-maxScreen h-40 sm:h-64 mx-auto bg-[url('/images/male-hair.png')] bg-fixed bg-cover bg-center brightness-75"></div>
+            <div className="max-w-t-maxScreen h-40 sm:h-64 mx-auto bg-[url('/images/male-hair.png')] bg-fixed bg-contain sm:bg-cover bg-center brightness-75"></div>
         </>
     )
 }
