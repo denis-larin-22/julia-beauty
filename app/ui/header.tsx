@@ -89,7 +89,7 @@ const Header = () => {
                     >
                         x
                     </button>
-                    <Logo style="self-center absolute bottom-6" />
+                    <Logo style="self-center absolute bottom-16" iconColor="black" />
                 </div>}
             </nav>
         </header>
