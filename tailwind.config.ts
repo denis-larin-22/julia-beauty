@@ -22,7 +22,7 @@ const config: Config = {
       },
       fontSize: {
         't-sm-semibold': ['1em', {
-          lineHeight: '140%',
+          lineHeight: '150%',
           fontWeight: '600'
         }],
         't-sm-regular': ['1em', {

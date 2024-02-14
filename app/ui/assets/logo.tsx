@@ -1,11 +1,37 @@
-import { LogoIcon } from "./logo-icon"
+'use client'
+
+import { _createAnimation } from "../../lib/_utils/_createFramerAnimation";
+import { syne } from "../fonts";
+import { LogoIcon } from "./logo-icon";
+import { motion } from "framer-motion";
 
 export const Logo = ({ style, iconColor }: { style?: string, iconColor?: 'black' | 'brown' }) => {
+    const [initialJuliaWord, animateJuliaWord, transitionJuliaWord] = _createAnimation({ opacity: 0, scale: 1.1, x: '-10px', duration: 0.5, delay: 0.2 });
+    const [initialMagicWord, animateMagicWord, transitionMagicWord] = _createAnimation({ opacity: 0, scale: 1.1, y: '-10px', duration: 0.5, delay: 0.4 });
+    const [initialBeautyWord, animateBeautyWord, transitionBeautyWord] = _createAnimation({ opacity: 0, scale: 1.1, y: '10px', duration: 0.5, delay: 0.4 });
+
+
     return (
-        <div className={`flex items-center gap-1 md:gap-2 text-[0.8em] md:text-t-sm-semibold tracking-[0.5em] ${style}`}>
-            <p className="">JULIA</p>
+        <div className={`${syne.className} flex items-center gap-1 text-[0.8em] md:text-t-sm-semibold tracking-[0.5em] ${style}`}>
+            <motion.p
+                className={iconColor === 'black' ? 'black' : 'white'}
+                initial={initialJuliaWord}
+                animate={animateJuliaWord}
+                transition={transitionJuliaWord}
+            >JULIA</motion.p>
             <LogoIcon iconColor={iconColor} />
-            <p className="text-t-brown">BEAUTY</p>
+            <div className="text-t-brown">
+                <motion.p
+                    initial={initialMagicWord}
+                    animate={animateMagicWord}
+                    transition={transitionMagicWord}
+                >MAGIC</motion.p>
+                <motion.p
+                    initial={initialBeautyWord}
+                    animate={animateBeautyWord}
+                    transition={transitionBeautyWord}
+                >BEAUTY</motion.p>
+            </div>
         </div >
     )
 }

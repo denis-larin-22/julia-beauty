@@ -46,7 +46,7 @@ const ServicesList = () => {
                 </ul>
                 <Link
                     href="/contacts"
-                    className="mx-auto text-t-black hover:text-white border-2 border-t-brown bg-transparent hover:bg-t-brown hover:scale-105 py-2 px-5 rounded-xl duration-100 "
+                    className="mx-auto text-t-black text-t-sm-bold hover:text-white border-2 border-t-brown bg-transparent hover:bg-t-brown hover:scale-105 py-2 px-5 rounded-xl duration-100 "
                 >
                     Записаться »
                 </Link>

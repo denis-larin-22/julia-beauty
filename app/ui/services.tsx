@@ -44,14 +44,16 @@ const Services = () => {
                                 key={index}
                                 className="group relative w-36 sm:w-[329px] h-36 sm:h-[290px] p-3 sm:p-7 py-4 sm:py-10 border-[1px] border-[#F1F1F1] rounded-xl shadow-xl overflow-hidden flex flex-col items-center gap-5"
                             >
-                                <img
+                                <Image
+                                    width={329}
+                                    height={290}
                                     src={service.image}
                                     alt="Card background image"
                                     className="w-full h-full absolute group-hover:top-0 scale-110 -top-[110%] left-0 -z-10 contrast-50 brightness-50 duration-100"
                                 />
                                 <p className="text-t-sm-bold sm:text-[1.4em] text-t-brown">{service.title}</p>
                                 <p className="sm:text-t-sm-regular group-hover:text-white text-center">{service.text}</p>
-                                <Link href="/" className="text-t-sm-regular text-white border-2 border-t-brown bg-transparent hover:bg-t-brown px-6 sm:px-10 rounded-md absolute -bottom-10 group-hover:bottom-2 duration-200">More »</Link>
+                                <Link href="/services-list" className="absolute -bottom-full group-hover:-bottom-16 -right-full group-hover:-right-16 w-40 h-40 bg-t-brown border-2 border-t-brown-light rounded-full flex items-start justify-start p-8 pt-12 duration-200 text-t-brown-light">More »</Link>
                             </li>
                         )
                     })}

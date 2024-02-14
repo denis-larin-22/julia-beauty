@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Logo } from "./assets/logo";
-import { CallIcon, InstagramIcon, MailIcon, TelegramIcon } from "./assets/links-icons";
+import { CallIcon, MailIcon, TelegramIcon, ViberIcon } from "./assets/links-icons";
 
 interface ILinkObj {
     name: string,
@@ -39,7 +39,7 @@ const Footer = () => {
                                 <TelegramIcon />
                             </a>
                             <a href="">
-                                <InstagramIcon />
+                                <ViberIcon />
                             </a>
                         </div>
                         <a href="/" className="flex items-center gap-3">

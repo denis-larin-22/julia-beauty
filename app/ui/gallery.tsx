@@ -15,6 +15,7 @@ const Gallery = () => {
                 {portfolioList.map((item, index) => (
                     <Link
                         href="/"
+                        key={index}
                     >
                         <Image
                             src="/images/process.jpg"

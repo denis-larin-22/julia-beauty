@@ -1,6 +1,6 @@
 'use client'
 import Link from "next/link";
-import { CallIcon, InstagramIcon, MailIcon, TelegramIcon } from "./assets/links-icons";
+import { CallIcon, MailIcon, TelegramIcon, ViberIcon } from "./assets/links-icons";
 import { Logo } from "./assets/logo";
 import { inter } from "./fonts";
 import { usePathname } from "next/navigation";
@@ -46,14 +46,18 @@ const Header = () => {
                             <TelegramIcon />
                         </a>
                         <a href="">
-                            <InstagramIcon />
+                            <ViberIcon />
                         </a>
                     </div>
                 </div>
                 {/* nav */}
             </div >
             <nav className="container relative py-2 md:py-5 flex justify-between lg:justify-around items-center">
-                <Logo iconColor="black" />
+                <Link
+                    href="/"
+                >
+                    <Logo iconColor="black" />
+                </Link>
                 <div className="hidden lg:flex gap-8">
                     {links.map((link) => (
                         <Link
