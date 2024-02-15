@@ -53,7 +53,7 @@ const Services = () => {
                                 />
                                 <p className="text-t-sm-bold sm:text-[1.4em] text-t-brown">{service.title}</p>
                                 <p className="sm:text-t-sm-regular group-hover:text-white text-center">{service.text}</p>
-                                <Link href="/services-list" className="absolute -bottom-full group-hover:-bottom-16 -right-full group-hover:-right-16 w-40 h-40 bg-t-brown border-2 border-t-brown-light rounded-full flex items-start justify-start p-8 pt-12 duration-200 text-t-brown-light">More »</Link>
+                                <Link href="/services-list" className="absolute -bottom-full group-hover:-bottom-16 -right-full group-hover:-right-16 w-28 md:w-40 h-28 md:h-40 bg-t-brown border-2 border-t-brown-light rounded-full flex items-start justify-start pt-6 pl-4 md:p-8 md:pt-12 duration-200 text-t-brown-light">More »</Link>
                             </li>
                         )
                     })}
