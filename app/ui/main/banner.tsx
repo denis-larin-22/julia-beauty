@@ -1,4 +1,5 @@
 import Image from "next/image"
+import Link from "next/link";
 
 const Banner = () => {
     return (
@@ -28,7 +29,7 @@ const Banner = () => {
                     <p className="text-t-md my-6">
                         Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.
                     </p>
-                    <button className="bg-t-black hover:bg-black rounded-lg py-3 px-6 text-white">Saiba Mais »</button>
+                    <Link href="/about-me" className="bg-t-black hover:bg-black rounded-lg py-3 px-6 text-white">Про мене »</Link>
                 </div>
             </section>
         </div>

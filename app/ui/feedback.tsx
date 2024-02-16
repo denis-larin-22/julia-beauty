@@ -1,4 +1,5 @@
 'use client'
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 const Feedback = () => {
@@ -37,6 +38,7 @@ const Feedback = () => {
                     </li>
                 ))}
             </ul>
+            <Link href="/feedback" className="inline-block text-t-black hover:text-white border-2 border-t-brown bg-transparent hover:bg-t-brown py-2 px-5 mt-5 rounded-xl duration-100">Дивитись усі»</Link>
         </section>
     )
 }
