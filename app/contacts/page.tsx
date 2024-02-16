@@ -2,6 +2,7 @@ import AnimatedWrap from "../ui/animated-wrap";
 import { InstagramIcon, TelegramIcon, ViberIcon, WhatsappIcon } from "../ui/assets/links-icons";
 import { Logo } from "../ui/assets/logo";
 import { inter } from "../ui/fonts";
+import TitleBlock from "../ui/title-block";
 
 const Contacts = () => {
     const links = [
@@ -23,11 +24,14 @@ const Contacts = () => {
         }
     ]
 
+    const path = '';
+
     return (
         <section className="">
-            <div className="relative max-w-t-maxScreen h-40 sm:h-80 mx-auto bg-[url('/images/contacts/scissors.webp')] bg-fixed bg-contain sm:bg-cover bg-center brightness-75 flex items-center justify-center">
-                <p className="w-fit text-white text-t-xxl border-b-2 border-t-brown">Contacts</p>
-            </div>
+            <TitleBlock
+                title="Contacts"
+                styles='bg-[url("/images/contacts/scissors.webp")]'
+            />
 
             <div className="container grid grid-cols-1 md:grid-cols-2 gap-5 p-5 md:p-10">
                 <div className={`${inter.className} flex flex-col gap-5`}>

@@ -3,10 +3,11 @@
 import { useState } from "react";
 
 interface IProps {
-    srcImagesArray: string[]
+    srcImagesArray: string[],
+    wrapStyles?: string
 }
 
-const Carousel = ({ srcImagesArray }: IProps) => {
+const Carousel = ({ srcImagesArray, wrapStyles }: IProps) => {
     const [currentIndexImage, setCurrentIndexImage] = useState(0);
     const [fullSizeImage, setFullSizeImage] = useState(false);
 
@@ -33,18 +34,18 @@ const Carousel = ({ srcImagesArray }: IProps) => {
 
     return (
         <div
-            className={fullSizeImage ? "absolute top-0 left-0 h-screen w-screen flex items-center justify-center bg-[#000000bf]" : "relative flex items-center justify-center  gap-2 md:gap-4"}
+            className={fullSizeImage ? "fixed top-0 left-0 z-30 h-screen w-screen flex items-center justify-center bg-[#000000ce]" : `relative flex items-center justify-center gap-1 md:gap-4 ${wrapStyles}`}
             onClick={(e) => {
                 if (e.currentTarget === e.target) setFullSizeImage(false);
             }}
         >
             <button
-                className={`w-8 h-8 flex items-center justify-center bg-transparent md:bg-t-brown-light hover:bg-t-brown hover:scale-105 active:scale-90 duration-150 rounded-full text-white  text-2xl ${fullSizeImage && 'absolute left-[5%]'}`}
+                className={`w-8 h-8 flex items-center justify-center bg-transparent md:bg-t-brown hover:scale-105 active:scale-90 duration-150 rounded-full text-black md:text-white  text-2xl ${fullSizeImage && 'absolute left-0 md:left-[2%] bg-transparent text-4xl text-gray-400'}`}
                 onClick={() => switchImage("prev")}
             >
                 {'<'}
             </button>
-            <div className={`${fullSizeImage ? 'w-3/4 h-fit z-10' : 'w-[600px] h-[400px]'} flex items-center justify-center overflow-hidden rounded-xl`}>
+            <div className={`${fullSizeImage ? 'w-[85vw] h-fit z-10' : 'w-[600px] h-fit max-h-96'} flex items-center justify-center overflow-hidden rounded-xl`}>
                 <img
                     src={srcImagesArray[currentIndexImage]}
                     alt="Photos of works from the portfolio"
@@ -52,7 +53,7 @@ const Carousel = ({ srcImagesArray }: IProps) => {
                     className="h-fit max-h-screen w-full object-cover cursor-pointer"
                 />
             </div>
-            <ul className="absolute bottom-2 flex gap-2 z-20">
+            <ul className={`absolute bottom-2 ${fullSizeImage && "bottom-20"} flex gap-2 z-20`}>
                 {srcImagesArray.map((image, index) => (
                     <li
                         key={index}
@@ -62,7 +63,7 @@ const Carousel = ({ srcImagesArray }: IProps) => {
                 ))}
             </ul>
             <button
-                className={`w-8 h-8 flex items-center justify-center bg-transparent md:bg-t-brown-light hover:bg-t-brown hover:scale-105 active:scale-90 duration-150 rounded-full text-white  text-2xl ${fullSizeImage && 'absolute right-[5%]'}`}
+                className={`w-8 h-8 flex items-center justify-center bg-transparent md:bg-t-brown hover:scale-105 active:scale-90 duration-150 rounded-full text-black md:text-white  text-2xl ${fullSizeImage && 'absolute right-0 md:right-[2%] bg-transparent text-4xl text-gray-400'}`}
                 onClick={() => switchImage("next")}
             >
                 {'>'}

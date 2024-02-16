@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { inter } from "../ui/fonts";
 import Link from "next/link";
+import TitleBlock from "../ui/title-block";
 
 const ServicesList = () => {
     const [toggleVissible, setToggleVissible] = useState(false);
@@ -28,9 +29,11 @@ const ServicesList = () => {
 
     return (
         <section className="">
-            <div className="relative max-w-t-maxScreen h-40 sm:h-80 mx-auto bg-[url('/images/services/scissors.webp')] bg-fixed bg-cover bg-center brightness-75 flex items-center justify-center">
-                <p className="w-fit text-white text-t-xxl border-b-2 border-t-brown">Service list</p>
-            </div>
+            <TitleBlock
+                title="Service list"
+                styles="bg-[url('/images/services/scissors.webp')]"
+            />
+
             <section className={`container ${inter.className} pb-8 text-center`}>
                 <ul className="max-w-[800px] flex flex-col items-center gap-y-5 mx-auto py-10">
                     {servicesList.map((item, index) => (

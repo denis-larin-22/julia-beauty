@@ -1,12 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
+import TitleBlock from "../ui/title-block";
 
 const AboutMe = () => {
     return (
         <section className="">
-            <div className="relative max-w-t-maxScreen h-40 sm:h-80 mx-auto bg-[url('/images/about-me/bg1.webp')] bg-fixed bg-contain sm:bg-cover  bg-center brightness-75 flex items-center justify-center">
-                <p className="w-fit text-white text-t-xxl border-b-2 border-t-brown">About me</p>
-            </div>
+            <TitleBlock
+                title="About me"
+                styles="bg-[url('/images/about-me/bg1.webp')]"
+            />
 
             <article className="container grid grid-cols-1 md:grid-cols-2 items-center gap-3 md:gap-10 py-5 md:py-0">
                 <div className="">
