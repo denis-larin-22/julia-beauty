@@ -1,30 +1,10 @@
 import AnimatedWrap from "../ui/common/animated-wrap";
-import { InstagramIcon, TelegramIcon, ViberIcon, WhatsappIcon } from "../ui/assets/links-icons";
 import { Logo } from "../ui/assets/logo";
 import { inter } from "../ui/fonts";
 import PageWrap from "../ui/common/page-wrap";
+import { socialNetworksLinks } from "../ui/common/social-networks-links";
 
 const Contacts = () => {
-    const links = [
-        {
-            icon: <TelegramIcon color="black" />,
-            href: '/'
-        },
-        {
-            icon: <ViberIcon color="black" />,
-            href: '/'
-        },
-        {
-            icon: <InstagramIcon color="black" />,
-            href: '/'
-        },
-        {
-            icon: <WhatsappIcon color="black" />,
-            href: '/'
-        }
-    ]
-
-    const path = '';
 
     return (
         <PageWrap
@@ -61,7 +41,7 @@ const Contacts = () => {
                         delay={0.5}
                     >
                         <ul className="flex items-center justify-center md:justify-normal gap-5">
-                            {links.map((link, index) => (
+                            {socialNetworksLinks.map((link, index) => (
                                 <li
                                     key={index}
                                     className="hover:scale-125 duration-150"
