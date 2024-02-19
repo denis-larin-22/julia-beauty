@@ -1,15 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
-import TitleBlock from "../ui/title-block";
+import PageWrap from "../ui/common/page-wrap";
 
 const AboutMe = () => {
     return (
-        <section className="">
-            <TitleBlock
-                title="About me"
-                styles="bg-[url('/images/about-me/bg1.webp')]"
-            />
-
+        <PageWrap
+            backgroundStyles="bg-[url('/images/about-me/bg1.webp')]"
+            title="About me"
+        >
             <article className="container grid grid-cols-1 md:grid-cols-2 items-center gap-3 md:gap-10 py-5 md:py-0">
                 <div className="">
                     <h2 className="text-t-xxl text-black border-b-2 border-t-brown w-fit mb-5 md:mb-11">Hello world</h2>
@@ -34,7 +32,7 @@ const AboutMe = () => {
                     <Link href="/gallery" className="self-end text-t-black hover:text-white border-2 border-t-brown bg-transparent hover:bg-t-brown py-2 px-5 rounded-xl duration-100">Gallery »</Link>
                 </div>
             </article>
-        </section >
+        </PageWrap>
     )
 }
 

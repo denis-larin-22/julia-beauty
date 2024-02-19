@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { inter } from "../ui/fonts";
 import Link from "next/link";
-import TitleBlock from "../ui/title-block";
+import PageWrap from "../ui/common/page-wrap";
 
 const ServicesList = () => {
     const [toggleVissible, setToggleVissible] = useState(false);
@@ -28,12 +28,10 @@ const ServicesList = () => {
     ]
 
     return (
-        <section className="">
-            <TitleBlock
-                title="Service list"
-                styles="bg-[url('/images/services/scissors.webp')]"
-            />
-
+        <PageWrap
+            backgroundStyles="bg-[url('/images/services/scissors.webp')]"
+            title="Service list"
+        >
             <section className={`container ${inter.className} pb-8 text-center`}>
                 <ul className="max-w-[800px] flex flex-col items-center gap-y-5 mx-auto py-10">
                     {servicesList.map((item, index) => (
@@ -54,7 +52,7 @@ const ServicesList = () => {
                     Записаться »
                 </Link>
             </section>
-        </section>
+        </PageWrap>
     )
 }
 

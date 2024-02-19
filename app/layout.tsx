@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { syne } from "./ui/fonts";
-import Header from "./ui/header";
-import Footer from "./ui/footer";
+import Header from "./ui/common/header";
+import Footer from "./ui/common/footer";
 
 export const metadata: Metadata = {
   title: "Julia Beauty",

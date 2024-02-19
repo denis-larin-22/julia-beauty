@@ -32,9 +32,8 @@ const Services = () => {
     ]
 
     return (
-        <>
-            <div className="max-w-t-maxScreen h-40 sm:h-64 mx-auto bg-[url('/images/transition-1.jpg')] bg-fixed bg-cover bg-center brightness-75"></div>
-            <section className="container flex flex-col items-center my-6">
+        <div className="bg-white mb-40 md:mb-72">
+            <section className="container flex flex-col items-center py-6">
                 <p className="uppercase text-t-lg lg:mt-12">nossos</p>
                 <h2 className="uppercase text-t-xl text-t-brown mb-14">serviços</h2>
                 <ul className="grid grid-cols-2 sm:grid-cols-1 lg:grid-cols-2  2xl:grid-cols-4 gap-7">
@@ -42,7 +41,7 @@ const Services = () => {
                         return (
                             <li
                                 key={index}
-                                className="group relative w-36 sm:w-[329px] h-36 sm:h-[290px] p-3 sm:p-7 py-4 sm:py-10 border-[1px] border-[#F1F1F1] rounded-xl shadow-xl overflow-hidden flex flex-col items-center gap-5"
+                                className="group relative z-0 w-36 sm:w-[329px] h-36 sm:h-[290px] p-3 sm:p-7 py-4 sm:py-10 border-[1px] border-[#F1F1F1] rounded-xl shadow-xl overflow-hidden flex flex-col items-center gap-5"
                             >
                                 <Image
                                     width={329}
@@ -60,9 +59,7 @@ const Services = () => {
 
                 </ul>
             </section>
-
-            <div className="max-w-t-maxScreen h-40 sm:h-64 mx-auto bg-[url('/images/male-hair.png')] bg-fixed bg-cover bg-center brightness-75"></div>
-        </>
+        </div>
     )
 }
 

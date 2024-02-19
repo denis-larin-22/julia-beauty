@@ -31,7 +31,7 @@ const Skills = () => {
     ];
 
     return (
-        <article className="relative z-10 flex flex-col md:flex-row max-w-t-maxScreen mx-auto">
+        <article className="relative z-10 max-w-t-maxScreen mx-auto bg-white flex flex-col md:flex-row">
             <div className="container max-w-[577px] my-6 lg:my-12 2xl:my-28">
                 <p className="uppercase text-t-lg">Sobre A</p>
                 <h2 className="uppercase text-t-xl text-t-brown">bueno beauty</h2>

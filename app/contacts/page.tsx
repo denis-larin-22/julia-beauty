@@ -1,8 +1,8 @@
-import AnimatedWrap from "../ui/animated-wrap";
+import AnimatedWrap from "../ui/common/animated-wrap";
 import { InstagramIcon, TelegramIcon, ViberIcon, WhatsappIcon } from "../ui/assets/links-icons";
 import { Logo } from "../ui/assets/logo";
 import { inter } from "../ui/fonts";
-import TitleBlock from "../ui/title-block";
+import PageWrap from "../ui/common/page-wrap";
 
 const Contacts = () => {
     const links = [
@@ -27,13 +27,11 @@ const Contacts = () => {
     const path = '';
 
     return (
-        <section className="">
-            <TitleBlock
-                title="Contacts"
-                styles='bg-[url("/images/contacts/scissors.webp")]'
-            />
-
-            <div className="container grid grid-cols-1 md:grid-cols-2 gap-5 p-5 md:p-10">
+        <PageWrap
+            backgroundStyles='bg-[url("/images/contacts/scissors.webp")]'
+            title="Contacts"
+        >
+            <section className="container grid grid-cols-1 md:grid-cols-2 gap-5 p-5 md:p-10">
                 <div className={`${inter.className} flex flex-col gap-5`}>
                     <Logo iconColor="black" style="self-center" />
 
@@ -55,7 +53,6 @@ const Contacts = () => {
                         <h4 className="text-t-xl">Телефон</h4>
                         <a href="" className="text-t-lg font-normal">+38 066 771 86 57</a>
                     </AnimatedWrap>
-
 
                     <AnimatedWrap
                         y={50}
@@ -89,8 +86,8 @@ const Contacts = () => {
                         referrerPolicy="no-referrer-when-downgrade"
                     ></iframe>
                 </AnimatedWrap>
-            </div>
-        </section>
+            </section>
+        </PageWrap>
     )
 }
 

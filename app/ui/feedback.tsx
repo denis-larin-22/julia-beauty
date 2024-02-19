@@ -15,7 +15,7 @@ const Feedback = () => {
     }, []);
 
     return (
-        <section className="max-w-t-maxScreen py-12 flex flex-col items-center bg-t-brown-light">
+        <section className="max-w-t-maxScreen py-12 mb-40 md:mb-72 mx-auto flex flex-col items-center bg-t-brown-light">
             <h5 className="text-t-xl text-t-brown uppercase mb-10">Depoimentos</h5>
             <ul className="container flex items-center flex-wrap justify-around">
                 {[currentIndex, (currentIndex + 1) % reviewsList.length].map((index) => (

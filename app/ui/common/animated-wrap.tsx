@@ -1,8 +1,8 @@
 'use client'
 
 import { motion, useInView } from "framer-motion";
-import { IAnimationValues } from "../lib/types/definitions";
-import { _createAnimation } from "../lib/_utils/_createFramerAnimation";
+import { IAnimationValues } from "../../lib/types/definitions";
+import { _createAnimation } from "../../lib/_utils/_createFramerAnimation";
 import { RefObject, useRef } from "react";
 
 interface IProps extends IAnimationValues {

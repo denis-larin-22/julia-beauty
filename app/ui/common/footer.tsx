@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { Logo } from "./assets/logo";
-import { CallIcon, MailIcon, TelegramIcon, ViberIcon } from "./assets/links-icons";
+import { Logo } from "../assets/logo";
+import { CallIcon, MailIcon, TelegramIcon, ViberIcon } from "../assets/links-icons";
 
 interface ILinkObj {
     name: string,

@@ -1,8 +1,8 @@
 'use client'
 import Link from "next/link";
-import { CallIcon, MailIcon, TelegramIcon, ViberIcon } from "./assets/links-icons";
-import { Logo } from "./assets/logo";
-import { inter } from "./fonts";
+import { CallIcon, MailIcon, TelegramIcon, ViberIcon } from "../assets/links-icons";
+import { Logo } from "../assets/logo";
+import { inter } from "../fonts";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 
@@ -25,7 +25,7 @@ const Header = () => {
     ];
 
     return (
-        <header>
+        <header className="bg-white">
             <div className="bg-t-brown">
                 {/* contacts */}
                 <div className={`container py-4 bg-t-brown text-white ${inter.className} font-medium text-xs md:text-sm leading-[1.2em] flex justify-between items-center`}>
