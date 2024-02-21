@@ -11,22 +11,22 @@ const Skills = () => {
         {
             title: 'Amet minim mollit',
             text: 'Amet minim mollit non deserunt ullam co est sit.',
-            icon: '/images/001-salon.png'
+            icon: '/images/001-salon.webp'
         },
         {
             title: 'Amet minim mollit',
             text: 'Amet minim mollit non deserunt ullam co est sit.',
-            icon: '/images/003-hair-cutting.png'
+            icon: '/images/003-hair-cutting.webp'
         },
         {
             title: 'Amet minim mollit',
             text: 'Amet minim mollit non deserunt ullam co est sit.',
-            icon: '/images/002-shampoo.png'
+            icon: '/images/002-shampoo.webp'
         },
         {
             title: 'Amet minim mollit',
             text: 'Amet minim mollit non deserunt ullam co est sit.',
-            icon: '/images/005-toiletries.png'
+            icon: '/images/005-toiletries.webp'
         }
     ];
 
@@ -58,7 +58,7 @@ const Skills = () => {
                 </ul>
             </div>
             <Image
-                src="/images/female-hairdresser-making.png"
+                src="/images/female-hairdresser-making.webp"
                 width={885}
                 height={701}
                 alt="The process of haircut"

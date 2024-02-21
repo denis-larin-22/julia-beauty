@@ -1,4 +1,4 @@
-import { Inter, Syne } from 'next/font/google';
+import { Inter, Syne, Open_Sans } from 'next/font/google';
 
 export const inter = Inter({
     subsets: ['latin', 'cyrillic'],
@@ -9,3 +9,8 @@ export const syne = Syne({
     subsets: ['latin'],
     weight: ['500', '600']
 });
+
+export const openSans = Open_Sans({
+    subsets: ['cyrillic'],
+    weight: ['500', '600']
+})

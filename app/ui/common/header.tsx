@@ -1,8 +1,8 @@
 'use client'
 import Link from "next/link";
-import { CallIcon, MailIcon, TelegramIcon, ViberIcon } from "../assets/links-icons";
+import { CallIcon, InstagramIcon, MailIcon, TelegramIcon, ViberIcon } from "../assets/links-icons";
 import { Logo } from "../assets/logo";
-import { inter } from "../fonts";
+import { inter, openSans } from "../fonts";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { socialNetworksLinks } from "./social-networks-links";
@@ -18,12 +18,12 @@ const Header = () => {
     const [toggleNavbar, setToggleNavbar] = useState(false);
 
     const links: Array<ILinkObj> = [
-        { name: 'Home', href: '/' },
-        { name: 'About me', href: '/about-me' },
-        { name: 'Gallery', href: '/gallery' },
-        { name: 'Services', href: '/services-list' },
-        { name: 'Feedback', href: '/feedback' },
-        { name: 'Contacts', href: '/contacts' },
+        { name: 'Головна', href: '/' },
+        { name: 'Про мене', href: '/about-me' },
+        { name: 'Мої роботи', href: '/gallery' },
+        { name: 'Послуги', href: '/services-list' },
+        { name: 'Відгуки', href: '/feedback' },
+        { name: 'Контакти', href: '/contacts' },
     ];
 
     return (
@@ -37,7 +37,7 @@ const Header = () => {
                     <div className="flex items-center gap-10">
                         <a href="https://www.google.com/intl/ru/gmail/about/" target="_blank" className="hidden sm:flex items-center gap-3">
                             <MailIcon />
-                            contato@buenobeauty.com.br
+                            yarmakulia5@gmail.com
                         </a>
                         <a href="tel:380667718657" className="flex items-center gap-3">
                             <CallIcon />
@@ -47,11 +47,11 @@ const Header = () => {
 
                     <div className="flex items-center gap-4">
                         <p className="hidden md:inline">Follow me:</p>
-                        <a href="https://t.me/den4ik_larin" target="_blank">
+                        <a href="https://t.me/jyliya24" target="_blank">
                             <TelegramIcon />
                         </a>
-                        <a href="">
-                            <ViberIcon />
+                        <a href="https://www.instagram.com/jyliya24?igsh=ZGE3ajBkdzc3dnB6" target="_blank">
+                            <InstagramIcon />
                         </a>
                     </div>
                 </div>
@@ -75,7 +75,7 @@ const Header = () => {
             </div >
 
             {/* nav */}
-            <nav className="container relative py-2 md:py-5 flex justify-between lg:justify-around items-center border-t-4 border-t-brown md:border-0">
+            <nav className={`${openSans.className} container relative py-2 md:py-5 flex justify-between lg:justify-around items-center border-t-4 border-t-brown md:border-0`}>
                 <Link
                     href="/"
                 >
@@ -86,7 +86,7 @@ const Header = () => {
                         <Link
                             href={link.href}
                             key={link.name}
-                            className={`uppercase text-t-sm-bold font-medium hover:text-t-brown-strong ${pathname === link.href && 'text-t-brown'}`}
+                            className={`uppercase text-t-sm-bold font-medium hover:text-t-brown-strong ${pathname === link.href ? 'text-t-brown' : ''}`}
                         >
                             {link.name}
                         </Link>
@@ -105,6 +105,7 @@ const Header = () => {
                     <div className="fixed top-0 right-0 z-50 bg-t-brown-light w-full h-full p-4 flex flex-col gap-8 pt-16 mobile">
                         {links.map((link, index) => (
                             <AnimatedWrap
+                                key={link.name}
                                 x={150}
                                 opacity={0}
                                 duration={0.4}
@@ -112,7 +113,6 @@ const Header = () => {
                             >
                                 <Link
                                     href={link.href}
-                                    key={link.name}
                                     onClick={() => setToggleNavbar(false)}
                                     className={`uppercase text-t-sm-bold font-medium hover:text-t-brown-strong ${pathname === link.href && 'text-t-brown'}`}
                                 >

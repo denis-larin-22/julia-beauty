@@ -7,26 +7,20 @@ const Banner = () => {
         <div className="h-96 md:h-[586px] bg-t-brown">
             <section className="h-full relative container overflow-hidden flex items-end lg:items-center justify-center lg:justify-between">
                 <Image
-                    src="/images/circles-group.png"
+                    src="/images/circles-group.webp"
                     alt="Decoration image of circles"
                     width={848}
                     height={449}
                     className="absolute top-24 left-16 z-0 w-auto h-auto"
                 />
-                <AnimatedWrap
-                    y={100}
-                    opacity={0}
-                    duration={0.8}
-                >
-                    <Image
-                        src="/images/red-haired-girl.png"
-                        alt="A girl with long red hair"
-                        width={614}
-                        height={787}
-                        priority
-                        className="absolute lg:static -bottom-4 left-6 md:left-32 z-20 brightness-75 w-auto h-auto"
-                    />
-                </AnimatedWrap>
+                <Image
+                    src="/images/red-haired-girl.webp"
+                    alt="A girl with long red hair"
+                    width={614}
+                    height={787}
+                    priority
+                    className="absolute lg:static -bottom-4 left-6 md:left-32 z-20 brightness-75 w-auto h-auto"
+                />
 
                 <div className="max-w-[700px] z-30 text-center lg:text-left mb-4 text-white">
                     <AnimatedWrap

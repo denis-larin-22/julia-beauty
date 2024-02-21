@@ -44,7 +44,7 @@ const Feedback = () => {
 
     return (
         <PageWrap
-            backgroundStyles="bg-[url('/images/male-hair.png')]"
+            backgroundStyles="bg-[url('/images/male-hair.webp')]"
             title="Feedback"
         >
             <section className="py-12 mx-auto flex flex-col items-center bg-t-brown-light">

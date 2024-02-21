@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Logo } from "../assets/logo";
-import { CallIcon, MailIcon, TelegramIcon, ViberIcon } from "../assets/links-icons";
+import { CallIcon, InstagramIcon, MailIcon, TelegramIcon, ViberIcon } from "../assets/links-icons";
+import { openSans } from "../fonts";
 
 interface ILinkObj {
     name: string,
@@ -9,20 +10,20 @@ interface ILinkObj {
 
 const Footer = () => {
     const links: Array<ILinkObj> = [
-        { name: 'Home', href: '/' },
-        { name: 'About me', href: '/about-me' },
-        { name: 'Gallery', href: '/gallery' },
-        { name: 'Services', href: '/services-list' },
-        { name: 'Feedback', href: '/feedback' },
-        { name: 'Contacts', href: '/contacts' },
-    ]
+        { name: 'Головна', href: '/' },
+        { name: 'Про мене', href: '/about-me' },
+        { name: 'Мої роботи', href: '/gallery' },
+        { name: 'Послуги', href: '/services-list' },
+        { name: 'Відгуки', href: '/feedback' },
+        { name: 'Контакти', href: '/contacts' },
+    ];
 
     return (
         <footer className="bg-t-black text-white">
             <div className="container flex flex-col sm:flex-row items-start sm:items-center justify-between py-4 sm:py-8">
                 <Logo style="text-white self-center sm:self-auto" iconColor="brown" />
-                <div className="flex flex-col sm:flex-row gap-10 lg:gap-44 mt-3 items-start sm:items-center">
-                    <nav className="flex flex-col gap-3">
+                <div className={`${openSans.className} flex flex-col sm:flex-row gap-10 lg:gap-44 mt-3 items-start sm:items-center`} >
+                    < nav className="flex flex-col gap-3">
                         {links.map((link) => (
                             <Link
                                 href={link.href}
@@ -35,26 +36,31 @@ const Footer = () => {
                     </nav>
                     <div className="flex flex-col gap-4">
                         <div className="flex items-center gap-4">
-                            <a href="">
+                            <a href="https://t.me/jyliya24" target="_blank">
                                 <TelegramIcon />
                             </a>
-                            <a href="">
-                                <ViberIcon />
+                            <a href="https://www.instagram.com/jyliya24?igsh=ZGE3ajBkdzc3dnB6" target="_blank">
+                                <InstagramIcon />
                             </a>
                         </div>
-                        <a href="/" className="flex items-center gap-3">
+                        <a href="tel:380667718657" className="flex items-center gap-3">
                             <CallIcon />
                             097 555 12 17
                         </a>
-                        <a href="/" className="flex items-center gap-3">
+                        <a href="https://www.google.com/intl/ru/gmail/about/" target="_blank" className="flex items-center gap-3">
                             <MailIcon />
-                            contato@buenobeauty.com.br
+                            yarmakulia5@gmail.com
                         </a>
                     </div>
                 </div>
             </div>
-        </footer>
+        </footer >
     )
+
+
+
+    // OPENSANS поставь на весь сайт а старій в тех местах гле нужен!!!!!
+
 }
 
 export default Footer; 

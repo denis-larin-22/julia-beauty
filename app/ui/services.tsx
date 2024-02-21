@@ -12,22 +12,22 @@ const Services = () => {
         {
             title: 'Lavada Especial',
             text: 'Amet minim mollit non deserunt ullam coet minim mollit.',
-            image: '/images/woman-washing-head.png'
+            image: '/images/woman-washing-head.webp'
         },
         {
             title: 'Lavada Especial',
             text: 'Amet minim mollit non deserunt ullam coet minim mollit.',
-            image: '/images/woman-washing-head.png'
+            image: '/images/woman-washing-head.webp'
         },
         {
             title: 'Lavada Especial',
             text: 'Amet minim mollit non deserunt ullam coet minim mollit.',
-            image: '/images/woman-washing-head.png'
+            image: '/images/woman-washing-head.webp'
         },
         {
             title: 'Lavada Especial',
             text: 'Amet minim mollit non deserunt ullam coet minim mollit.',
-            image: '/images/woman-washing-head.png'
+            image: '/images/woman-washing-head.webp'
         },
     ]
 
