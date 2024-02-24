@@ -31,7 +31,7 @@ const Gallery = () => {
                                 alt="The photo of work from portfolio"
                                 className=""
                             />
-                            <h6 className="text-t-md ">Sarah Rules</h6>
+                            <h6 className="text-t-md ">Work Name</h6>
                             <p className="text-t-sm-regular text-t-brown border-b-2 border-t-brown mb-6 md:mb-10">Hair Designer</p>
                         </Link>
                     </AnimatedWrap>
