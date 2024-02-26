@@ -4,21 +4,21 @@ import TitleBlock from "./title-block"
 
 interface IProps {
     children: Readonly<React.ReactNode>,
-    backgroundStyles: string,
+    srcBackground: string,
     title: string,
     wrapStyles?: string
 }
 
 const PageWrap = ({
     children,
-    backgroundStyles,
+    srcBackground,
     title,
     wrapStyles
 }: IProps) => {
 
     return (
         <>
-            <FixedBackground styles={backgroundStyles} />
+            <FixedBackground srcImage={srcBackground} />
             <TitleBlock title={title} />
 
             <div className={`bg-white ${wrapStyles} mt-12 md:mt-24`}>

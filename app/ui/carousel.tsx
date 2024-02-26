@@ -1,5 +1,6 @@
 'use client'
 
+import Image from "next/image";
 import { useState } from "react";
 
 interface IProps {
@@ -46,7 +47,9 @@ const Carousel = ({ srcImagesArray, wrapStyles }: IProps) => {
                 {'<'}
             </button>
             <div className={`${fullSizeImage ? 'w-[85vw] h-fit z-10' : 'w-[600px] h-fit max-h-96'} flex items-center justify-center overflow-hidden rounded-xl`}>
-                <img
+                <Image
+                    width={600}
+                    height={384}
                     src={srcImagesArray[currentIndexImage]}
                     alt="Photos of works from the portfolio"
                     onClick={() => setFullSizeImage(true)}

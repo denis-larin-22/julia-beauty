@@ -10,7 +10,7 @@ export default function Home() {
 
   return (
     <main className="relative overflow-hidden">
-      <FixedBackground styles="bg-[url('/images/transition-1.webp')]" />
+      <FixedBackground srcImage="/images/transition-1.webp" />
       <Banner />
       <Skills />
       <Services />

@@ -8,7 +8,7 @@ const Contacts = () => {
 
     return (
         <PageWrap
-            backgroundStyles='bg-[url("/images/contacts/scissors.webp")]'
+            srcBackground="/images/contacts/scissors.webp"
             title="Contacts"
         >
             <section className="container grid grid-cols-1 md:grid-cols-2 gap-5 p-5 md:p-10">

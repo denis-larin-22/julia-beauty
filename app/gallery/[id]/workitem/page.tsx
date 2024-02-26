@@ -7,7 +7,7 @@ const WorkItem = () => {
 
     return (
         <PageWrap
-            backgroundStyles="bg-[url('/images/gallery/haircut-tools.webp')]"
+            srcBackground="/images/gallery/haircut-tools.webp"
             title="My work"
         >
             <article className="container flex flex-col gap-5 py-5">

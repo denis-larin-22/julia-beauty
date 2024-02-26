@@ -8,7 +8,7 @@ const Gallery = () => {
 
     return (
         <PageWrap
-            backgroundStyles="bg-[url('/images/gallery/haircut-tools.webp')]"
+            srcBackground="/images/gallery/haircut-tools.webp"
             title="Portfolio"
         >
             <section className="container py-5 flex flex-wrap gap-6 items-center justify-around">

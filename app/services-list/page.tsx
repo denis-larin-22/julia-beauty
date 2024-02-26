@@ -30,7 +30,7 @@ const ServicesList = () => {
 
     return (
         <PageWrap
-            backgroundStyles="bg-[url('/images/services/scissors.webp')]"
+            srcBackground="/images/services/scissors.webp"
             title="Service list"
         >
             <section className={`container ${inter.className} pb-8 text-center`}>
