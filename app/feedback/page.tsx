@@ -1,46 +1,9 @@
+import { getCommentsFromFirestoreDB } from "../lib/firebase/feedback";
 import AnimatedWrap from "../ui/common/animated-wrap";
 import PageWrap from "../ui/common/page-wrap";
 
-interface CommentObj {
-    name: string,
-    comment: string
-}
-
-const Feedback = () => {
-    const commentsList: CommentObj[] = [
-        {
-            name: 'Dima',
-            comment: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur deserunt, voluptatem at repellat nostrum harum quidem laudantium culpa obcaecati ducimus officiis totam soluta ipsum, laborum possimus ratione exercitationem repudiandae incidunt.'
-        },
-        {
-            name: 'Dima',
-            comment: 'Lorem ipsum dolor, si possimus ratione exercitationem repudiandae incidunt.'
-        },
-        {
-            name: 'Dima',
-            comment: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur deserunt, voluptatem at repellat nostrum harum quidem laudantium culpa obcaecati ducimus officiis totam soluta ipsum, laborum possimus ratione exercitationem repudiandae incidunt.'
-        },
-        {
-            name: 'Dima',
-            comment: 'Lorem ipsum dolor,mus ratione exercitationem repudiandae incidunt.'
-        },
-        {
-            name: 'Dima',
-            comment: 'Lorem ipsum dolor, sborum possimus ratione exercitationem repudiandae incidunt.'
-        },
-        {
-            name: 'Dima',
-            comment: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur deserunt, voluptatem at repellat nostrum harum quidem laudantium culpa obcaecati ducimus officiis totam soluta ipsum, laborum possimus ratione exercitationem repudiandae incidunt.'
-        },
-        {
-            name: 'Dima',
-            comment: 'Lorem ipsum dolor, sium possimus ratione exercitationem repudiandae incidunt.'
-        },
-        {
-            name: 'Dima',
-            comment: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur deserunt, voluptatem at repellat nostrum harum quidem laudantium culpa obcaecati ducimus officiis totam soluta ipsum, laborum possimus ratione exercitationem repudiandae incidunt.'
-        },
-    ]
+export default async function Feedback() {
+    const commentsList = await getCommentsFromFirestoreDB();
 
     return (
         <PageWrap
@@ -50,16 +13,15 @@ const Feedback = () => {
             <section className="py-12 mx-auto flex flex-col items-center bg-t-brown-light">
                 <ul className="container columns-1 md:columns-2">
                     {commentsList.map((item, index) => (
-                        <AnimatedWrap
+                        <li
                             key={index}
-                            x={100}
-                            opacity={0}
-                            duration={0.4}
-                            delay={index - (0.92 * index)}
-                            styles="w-full"
                         >
-                            <li
-                                className="max-w-full bg-t-brown-light brightness-[107%] rounded-xl py-4 md:py-8 px-5 md:px-10 mb-4"
+                            <AnimatedWrap
+                                x={100}
+                                opacity={0}
+                                duration={0.4}
+                                delay={index - (0.92 * index)}
+                                styles="max-w-full bg-t-brown-light brightness-[107%] rounded-xl py-4 md:py-8 px-5 md:px-10 mb-4"
                             >
                                 <div className="flex flex-col gap-3 md:gap-6">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="46.534058" height="35.000000" viewBox="0 0 46.5341 35" fill="none" className="w-4 h-4 md:w-10 md:h-10 ">
@@ -77,8 +39,8 @@ const Feedback = () => {
                                 <p className="mt-2 md:mt-5 text-md text-right text-t-brown-strong">
                                     {item.name}
                                 </p>
-                            </li>
-                        </AnimatedWrap>
+                            </AnimatedWrap>
+                        </li>
                     ))}
                 </ul>
             </section>
@@ -87,5 +49,3 @@ const Feedback = () => {
 
     )
 }
-
-export default Feedback;

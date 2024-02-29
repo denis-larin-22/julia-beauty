@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { syne } from "./ui/fonts";
+import { inter } from "./ui/fonts";
 import Header from "./ui/common/header";
 import Footer from "./ui/common/footer";
 
@@ -16,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${syne.className} antialiased flex flex-col`}>
+      <body className={`${inter.className} antialiased flex flex-col`}>
         <Header />
         {children}
         <Footer />

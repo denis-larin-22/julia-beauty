@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useState } from "react";
+import { syne } from "./fonts";
 
 interface IProps {
     srcImagesArray: string[],
@@ -41,19 +42,19 @@ const Carousel = ({ srcImagesArray, wrapStyles }: IProps) => {
             }}
         >
             <button
-                className={`w-8 h-8 flex items-center justify-center bg-transparent md:bg-t-brown hover:scale-105 active:scale-90 duration-150 rounded-full text-black md:text-white  text-2xl ${fullSizeImage && 'absolute left-0 md:left-[2%] bg-transparent text-4xl text-gray-400'}`}
+                className={`${syne.className} w-8 h-8 flex items-center justify-center bg-transparent md:bg-t-brown hover:scale-105 active:scale-90 duration-150 rounded-full text-black md:text-white  text-2xl ${fullSizeImage && 'absolute left-0 md:left-[2%] bg-transparent text-4xl text-gray-400'}`}
                 onClick={() => switchImage("prev")}
             >
                 {'<'}
             </button>
-            <div className={`${fullSizeImage ? 'w-[85vw] h-fit z-10' : 'w-[600px] h-fit max-h-96'} flex items-center justify-center overflow-hidden rounded-xl`}>
-                <Image
-                    width={600}
-                    height={384}
+            <div className={`${fullSizeImage ? 'w-[80vw] md:w-fit h-fit z-10' : 'w-96 max-h-[600px]'} flex items-center justify-center overflow-hidden rounded-xl`}>
+                <img
+                    width={384}
+                    height={600}
                     src={srcImagesArray[currentIndexImage]}
                     alt="Photos of works from the portfolio"
                     onClick={() => setFullSizeImage(true)}
-                    className="h-fit max-h-screen w-full object-cover cursor-pointer"
+                    className="h-fit max-h-screen w-full object-contain cursor-pointer"
                 />
             </div>
             <ul className={`absolute bottom-2 ${fullSizeImage && "bottom-20"} flex gap-2 z-20`}>
@@ -66,7 +67,7 @@ const Carousel = ({ srcImagesArray, wrapStyles }: IProps) => {
                 ))}
             </ul>
             <button
-                className={`w-8 h-8 flex items-center justify-center bg-transparent md:bg-t-brown hover:scale-105 active:scale-90 duration-150 rounded-full text-black md:text-white  text-2xl ${fullSizeImage && 'absolute right-0 md:right-[2%] bg-transparent text-4xl text-gray-400'}`}
+                className={`${syne.className} w-8 h-8 flex items-center justify-center bg-transparent md:bg-t-brown hover:scale-105 active:scale-90 duration-150 rounded-full text-black md:text-white  text-2xl ${fullSizeImage && 'absolute right-0 md:right-[2%] bg-transparent text-4xl text-gray-400'}`}
                 onClick={() => switchImage("next")}
             >
                 {'>'}

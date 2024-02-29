@@ -86,7 +86,7 @@ const Header = () => {
                         <Link
                             href={link.href}
                             key={link.name}
-                            className={`uppercase text-t-sm-bold font-medium hover:text-t-brown-strong ${pathname === link.href ? 'text-t-brown' : ''}`}
+                            className={`uppercase text-t-sm-bold font-medium hover:text-t-brown-strong duration-100 ${pathname === link.href ? 'text-t-brown' : ''}`}
                         >
                             {link.name}
                         </Link>
