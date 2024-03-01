@@ -1,6 +1,7 @@
 import Image from "next/image"
 import Link from "next/link";
 import AnimatedWrap from "../common/animated-wrap";
+import { syne } from "../fonts";
 
 const Banner = () => {
     return (
@@ -22,17 +23,16 @@ const Banner = () => {
                     className="absolute lg:static -bottom-4 left-6 md:left-32 z-20 brightness-75 w-auto h-auto"
                 />
 
-                <div className="max-w-[700px] z-30 text-center lg:text-left mb-4 text-white">
+                <div className="max-w-full lg:max-w-[700px] bg-[#0000008a] lg:bg-transparent p-5 rounded-lg z-30 text-center lg:text-left mb-4 text-white">
                     <AnimatedWrap
                         y={"-50px"}
                         opacity={0}
                         delay={0.4}
                         duration={0.5}
                     >
-                        <h1 className="text-t-xxl uppercase">
-                            seus cabelos precisam
-                            dos cuidados certos.
-                        </h1>
+                        <h2 className={`${syne.className} text-t-xxl uppercase`}>
+                            Julia Magic Beauty
+                        </h2>
                     </AnimatedWrap>
                     <AnimatedWrap
                         y={"-50px"}
@@ -40,9 +40,9 @@ const Banner = () => {
                         delay={0.6}
                         duration={0.5}
                     >
-                        <p className="text-t-md my-6">
-                            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.
-                        </p>
+                        <h1 className="text-t-lg uppercase my-6 text-t-brown-light">
+                            перукар-стиліст харків | стрижка | фарбування | догляд за волоссям
+                        </h1>
                     </AnimatedWrap>
                     <AnimatedWrap
                         y={"-40px"}
@@ -50,7 +50,10 @@ const Banner = () => {
                         delay={1}
                         duration={0.5}
                     >
-                        <Link href="/about-me" className="bg-t-black hover:bg-black rounded-lg py-3 px-6 text-white">Про мене »</Link>
+                        {/* <Link href="/about-me" className="bg-t-black hover:bg-black rounded-lg py-3 px-6 text-white">Про мене »</Link> */}
+                        <h3 className="text-t-md">
+                            Зануртеся у світ краси та догляду, де кожен момент - це можливість відчути себе особливою.
+                        </h3>
                     </AnimatedWrap>
                 </div>
             </section>

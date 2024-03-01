@@ -111,7 +111,7 @@ export const getAllPreviewWorksWithImages = async () => {
                 return {
                     id: work.id,
                     name: work.name,
-                    image: urlImageList.at(0),
+                    image: urlImageList[0],
                 };
             } catch (error) {
                 console.error(`Error fetching images for work with ID ${work.id}:`, error);

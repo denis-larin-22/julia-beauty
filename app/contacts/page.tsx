@@ -2,9 +2,28 @@ import AnimatedWrap from "../ui/common/animated-wrap";
 import { Logo } from "../ui/assets/logo";
 import { inter } from "../ui/fonts";
 import PageWrap from "../ui/common/page-wrap";
-import { socialNetworksLinks } from "../ui/common/social-networks-links";
+import { InstagramIcon, MailIcon, TelegramIcon, ViberIcon } from "../ui/assets/links-icons";
+
+interface IIconObj {
+    icon: JSX.Element;
+    href: string;
+}
 
 const Contacts = () => {
+    const socialNetworksLinks: IIconObj[] = [
+        {
+            icon: <TelegramIcon color="black" />,
+            href: 'https://t.me/jyliya24'
+        },
+        {
+            icon: <InstagramIcon color="black" />,
+            href: 'https://www.instagram.com/julia_magicbeautiful/?igsh=eXo5cGQxdDR5OWZh'
+        },
+        {
+            icon: <MailIcon color="black" />,
+            href: 'https://www.google.com/intl/ru/gmail/about/'
+        },
+    ];
 
     return (
         <PageWrap
@@ -31,7 +50,7 @@ const Contacts = () => {
                         delay={0.2}
                     >
                         <h4 className="text-t-xl">Телефон</h4>
-                        <a href="" className="text-t-lg font-normal">+38 066 771 86 57</a>
+                        <a href="tel:380667718657" className="text-t-lg font-normal">+38 066 771 86 57</a>
                     </AnimatedWrap>
 
                     <AnimatedWrap

@@ -50,7 +50,7 @@ const Header = () => {
                         <a href="https://t.me/jyliya24" target="_blank">
                             <TelegramIcon />
                         </a>
-                        <a href="https://www.instagram.com/jyliya24?igsh=ZGE3ajBkdzc3dnB6" target="_blank">
+                        <a href="https://www.instagram.com/julia_magicbeautiful/?igsh=eXo5cGQxdDR5OWZh" target="_blank">
                             <InstagramIcon />
                         </a>
                     </div>
@@ -75,7 +75,7 @@ const Header = () => {
             </div >
 
             {/* nav */}
-            <nav className={`${openSans.className} container relative py-2 md:py-5 flex justify-between lg:justify-around items-center border-t-4 border-t-brown md:border-0`}>
+            <nav className="container relative py-2 md:py-5 flex justify-between lg:justify-around items-center border-t-4 border-t-brown md:border-0">
                 <Link
                     href="/"
                 >

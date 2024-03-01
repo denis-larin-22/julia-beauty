@@ -1,10 +1,10 @@
 import Contacts from "./ui/contacts";
 import Feedback from "./ui/feedback";
 import FixedBackground from "./ui/common/fixed-background";
-import Gallery from "./ui/gallery";
+import Gallery from "./ui/main/gallery";
 import Banner from "./ui/main/banner";
 import Skills from "./ui/main/skills";
-import Services from "./ui/services";
+import Services from "./ui/main/services";
 
 export default function Home() {
 

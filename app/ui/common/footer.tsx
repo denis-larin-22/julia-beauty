@@ -39,13 +39,13 @@ const Footer = () => {
                             <a href="https://t.me/jyliya24" target="_blank">
                                 <TelegramIcon />
                             </a>
-                            <a href="https://www.instagram.com/jyliya24?igsh=ZGE3ajBkdzc3dnB6" target="_blank">
+                            <a href="https://www.instagram.com/julia_magicbeautiful/?igsh=eXo5cGQxdDR5OWZh" target="_blank">
                                 <InstagramIcon />
                             </a>
                         </div>
                         <a href="tel:380667718657" className="flex items-center gap-3">
                             <CallIcon />
-                            097 555 12 17
+                            +38 066 771 86 57
                         </a>
                         <a href="https://www.google.com/intl/ru/gmail/about/" target="_blank" className="flex items-center gap-3">
                             <MailIcon />

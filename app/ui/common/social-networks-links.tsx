@@ -16,7 +16,7 @@ export const socialNetworksLinks: IIconObj[] = [
     },
     {
         icon: <InstagramIcon color="black" />,
-        href: '/'
+        href: 'https://www.instagram.com/julia_magicbeautiful/?igsh=eXo5cGQxdDR5OWZh'
     },
     {
         icon: <WhatsappIcon color="black" />,
