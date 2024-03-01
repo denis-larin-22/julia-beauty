@@ -1,6 +1,5 @@
 'use client'
 
-import Image from "next/image";
 import { useState } from "react";
 import { syne } from "./fonts";
 
@@ -48,14 +47,17 @@ const Carousel = ({ srcImagesArray, wrapStyles }: IProps) => {
                 {'<'}
             </button>
             <div className={`${fullSizeImage ? 'w-[80vw] md:w-fit h-fit z-10' : 'w-96 max-h-[600px]'} flex items-center justify-center overflow-hidden rounded-xl`}>
-                <img
-                    width={384}
-                    height={600}
-                    src={srcImagesArray[currentIndexImage]}
-                    alt="Photos of works from the portfolio"
-                    onClick={() => setFullSizeImage(true)}
-                    className="h-fit max-h-screen w-full object-contain cursor-pointer"
-                />
+                {srcImagesArray.map((path, index) => (
+                    <img
+                        key={index}
+                        width={384}
+                        height={600}
+                        src={path}
+                        alt="Photos of works from the portfolio"
+                        onClick={() => setFullSizeImage(true)}
+                        className={`h-fit max-h-screen w-full object-contain cursor-pointer ${currentIndexImage === index ? 'inline' : 'hidden'}`}
+                    />
+                ))}
             </div>
             <ul className={`absolute bottom-2 ${fullSizeImage && "bottom-20"} flex gap-2 z-20`}>
                 {srcImagesArray.map((image, index) => (
