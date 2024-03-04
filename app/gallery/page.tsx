@@ -8,7 +8,7 @@ export default function Gallery() {
             srcBackground="/images/gallery/haircut-tools.webp"
             title="Мої роботи. Стиліст-парикмахер у Харкові"
         >
-            <section className="container py-5 flex flex-wrap gap-6 items-center justify-around bg-white z-40">
+            <section className="container py-5">
                 <GalleryList />
             </section>
         </PageWrap>
