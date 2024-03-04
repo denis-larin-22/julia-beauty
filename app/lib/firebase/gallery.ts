@@ -104,7 +104,7 @@ export const getAllPreviewWorksWithImages = async () => {
     try {
         const worksList = await getWorksListFromFirestoreDB();
 
-        const listWithImages = await Promise.all(worksList.map(async (work) => {
+        const promises = worksList.map(async (work) => {
             try {
                 const urlImageList = await getWorksImagesFromStorage(work.id, 'after');
 
@@ -115,11 +115,16 @@ export const getAllPreviewWorksWithImages = async () => {
                 };
             } catch (error) {
                 console.error(`Error fetching images for work with ID ${work.id}:`, error);
-                return {};
+                return null;
             }
-        }));
+        });
 
-        return listWithImages;
+        const listWithImages = await Promise.all(promises);
+
+        // Filter out any null entries (failed requests)
+        const filteredList = listWithImages.filter(item => item !== null);
+
+        return filteredList;
     } catch (error) {
         console.error('Error fetching works list:', error);
         return [];
