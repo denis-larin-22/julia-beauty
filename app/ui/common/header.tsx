@@ -20,7 +20,7 @@ const Header = () => {
     const links: Array<ILinkObj> = [
         { name: 'Головна', href: '/' },
         { name: 'Про мене', href: '/about-me' },
-        { name: 'Мої роботи', href: '/gallery' },
+        { name: 'Галерея', href: '/gallery' },
         { name: 'Послуги', href: '/services-list' },
         { name: 'Відгуки', href: '/feedback' },
         { name: 'Контакти', href: '/contacts' },
@@ -57,21 +57,16 @@ const Header = () => {
                 </div>
 
                 {/* contacts mobile*/}
-                <div className="flex justify-center items-center md:hidden fixed bottom-0 left-0 z-50 w-full py-2 bg-t-brown">
-                    <ul className="flex items-center justify-center md:justify-normal gap-5">
-                        <a href="tel:380667718657" className="">
-                            <CallIcon color="black" />
-                        </a>
-                        {socialNetworksLinks.map((link, index) => (
-                            <li
-                                key={index}
-                                className="hover:scale-125 duration-150"
-                            >
-                                <a href={link.href} target="_blank">{link.icon}</a>
-                            </li>
-                        ))}
-                    </ul>
-                </div>
+                <ul className="md:hidden fixed bottom-0 left-0 z-50 w-full bg-t-brown py-2 flex items-center justify-center gap-5">
+                    {socialNetworksLinks.map((link, index) => (
+                        <li
+                            key={index}
+                            className="hover:scale-125 duration-150"
+                        >
+                            <a href={link.href} target="_blank">{link.icon}</a>
+                        </li>
+                    ))}
+                </ul>
             </div >
 
             {/* nav */}

@@ -5,6 +5,7 @@ import { inter } from "../ui/fonts";
 import Link from "next/link";
 import PageWrap from "../ui/common/page-wrap";
 import AnimatedWrap from "../ui/common/animated-wrap";
+import TLink from "../ui/common/button";
 
 const ServicesList = () => {
     const [toggleVissible, setToggleVissible] = useState(false);
@@ -33,7 +34,7 @@ const ServicesList = () => {
             srcBackground="/images/services/scissors.webp"
             title="Service list"
         >
-            <section className={`container ${inter.className} pb-8 text-center`}>
+            <section className={`container ${inter.className} pb-8`}>
                 <ul className="max-w-[800px] flex flex-col items-center gap-y-5 mx-auto py-10">
                     {servicesList.map((item, index) => (
                         <AnimatedWrap
@@ -54,12 +55,8 @@ const ServicesList = () => {
                         </AnimatedWrap>
                     ))}
                 </ul>
-                <Link
-                    href="/contacts"
-                    className="mx-auto text-t-black text-t-sm-bold hover:text-white border-2 border-t-brown bg-transparent hover:bg-t-brown hover:scale-105 py-2 px-5 rounded-xl duration-100 "
-                >
-                    Записаться »
-                </Link>
+
+                <TLink href="/contacts" wrapStyles="mx-auto">Запис</TLink>
             </section>
         </PageWrap>
     )

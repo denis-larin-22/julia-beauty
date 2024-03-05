@@ -1,5 +1,5 @@
-import Contacts from "./ui/contacts";
-import Feedback from "./ui/feedback";
+import Contacts from "./ui/main/contacts";
+import Feedback from "./ui/main/feedback";
 import FixedBackground from "./ui/common/fixed-background";
 import Gallery from "./ui/main/gallery";
 import Banner from "./ui/main/banner";

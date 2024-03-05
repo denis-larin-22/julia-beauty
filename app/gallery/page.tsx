@@ -6,7 +6,7 @@ export default function Gallery() {
     return (
         <PageWrap
             srcBackground="/images/gallery/haircut-tools.webp"
-            title="Мої роботи. Стиліст-парикмахер у Харкові"
+            title="Мої роботи. Стиліст-перукар у Харкові"
         >
             <section className="container py-5">
                 <GalleryList />

@@ -1,7 +1,8 @@
 import Link from "next/link";
-import Carousel from "../../../ui/carousel";
+import Carousel from "../../../ui/common/carousel";
 import PageWrap from "../../../ui/common/page-wrap";
 import { IWorkInfo, getWorkItemFromFirestoreDB, getWorksImagesFromStorage } from "../../../lib/firebase/gallery";
+import TLink from "../../../ui/common/button";
 
 export default async function WorkItem({ params }: { params: { id: string } }) {
     const id = params.id;
@@ -29,14 +30,11 @@ export default async function WorkItem({ params }: { params: { id: string } }) {
                     <h4 className="text-t-xxl text-t-brown">{workInfo.name}</h4>
                     <p>{workInfo.description}</p>
 
-                    {[{ path: '/gallery', text: 'Галерея »' }, { path: '/contacts', text: 'Записатися »' }].map((link) => (
-                        <Link
-                            key={link.path}
-                            href={link.path}
-                            className="inline-block text-t-black hover:text-white border-2 border-t-brown bg-transparent hover:bg-t-brown py-2 px-5 mt-5 mr-5 rounded-xl duration-100">
-                            {link.text}
-                        </Link>
-                    ))}
+                    <div className="flex flex-col gap-5 flex-wrap mt-5">
+                        {[{ href: '/gallery', text: 'Галерея' }, { href: '/contacts', text: 'Записатися' }].map((link) => (
+                            <TLink href={link.href}>{link.text}</TLink>
+                        ))}
+                    </div>
                 </div>
             </article>
         </PageWrap>

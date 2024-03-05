@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from "react";
-import { syne } from "./fonts";
+import { syne } from "../fonts";
 
 interface IProps {
     srcImagesArray: string[],

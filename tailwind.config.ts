@@ -24,32 +24,26 @@ const config: Config = {
           lineHeight: '150%',
           fontWeight: '400',
         }],
-        // !
         't-sm-bold': ['1em', {
           lineHeight: '140%',
           fontWeight: '700'
         }],
-        // !
         't-md': ['1.2em', {
           lineHeight: '140%',
           fontWeight: '600'
         }],
-        // !
         't-lg': ['1.4em', {
           lineHeight: '140%',
           fontWeight: '700',
         }],
-        // !
         't-xl': ['2.2em', {
           lineHeight: '140%',
           fontWeight: '700'
         }],
-        // !
         't-xxl': ['2.9em', {
           lineHeight: '140%',
           fontWeight: '600'
         }],
-        // !
       },
       colors: {
         't-brown-strong': '#744B28',

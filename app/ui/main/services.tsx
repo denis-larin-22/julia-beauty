@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 interface IServiceObj {
-    title: string,
+    alt: string,
     text: string,
     image: string
 }
@@ -10,24 +10,24 @@ interface IServiceObj {
 const Services = () => {
     const serviceList: Array<IServiceObj> = [
         {
-            title: 'Lavada Especial',
-            text: 'Amet minim mollit non deserunt ullam coet minim mollit.',
-            image: '/images/woman-washing-head.webp'
+            alt: 'Blonding in Kharkiv',
+            text: 'Блондування, спец-блонд, тотал-блонд',
+            image: '/images/services/coloring.webp'
         },
         {
-            title: 'Lavada Especial',
-            text: 'Amet minim mollit non deserunt ullam coet minim mollit.',
-            image: '/images/woman-washing-head.webp'
+            alt: 'Hair coloring technique airtouch',
+            text: 'Фарбування коренів, однотонне фарбування',
+            image: '/images/services/airtouch.webp'
         },
         {
-            title: 'Lavada Especial',
-            text: 'Amet minim mollit non deserunt ullam coet minim mollit.',
-            image: '/images/woman-washing-head.webp'
+            alt: 'Male haircut',
+            text: 'Чоловіча стрижка, дитяча стрижка',
+            image: '/images/services/male-haircut.webp'
         },
         {
-            title: 'Lavada Especial',
-            text: 'Amet minim mollit non deserunt ullam coet minim mollit.',
-            image: '/images/woman-washing-head.webp'
+            alt: 'Hair care',
+            text: 'Жіноча стрижка, догляд за волоссям',
+            image: '/images/services/hair-care.webp'
         },
     ]
 
@@ -47,12 +47,11 @@ const Services = () => {
                                     width={329}
                                     height={290}
                                     src={service.image}
-                                    alt="Card background image"
-                                    className="w-full h-full absolute group-hover:top-0 scale-110 -top-[110%] left-0 -z-10 contrast-50 brightness-50 duration-100"
+                                    alt={service.alt}
+                                    className="w-full h-full absolute top-0 left-0 -z-10 contrast-50 brightness-50 object-cover"
                                 />
-                                <p className="text-t-sm-bold sm:text-[1.4em] text-t-brown">{service.title}</p>
-                                <p className="sm:text-t-sm-regular group-hover:text-white text-center">{service.text}</p>
-                                <Link href="/services-list" className="absolute -bottom-full group-hover:-bottom-16 -right-full group-hover:-right-16 w-28 md:w-40 h-28 md:h-40 bg-t-brown border-2 border-t-brown-light rounded-full flex items-start justify-start pt-6 pl-4 md:p-8 md:pt-12 duration-200 text-t-brown-light">More »</Link>
+                                <p className="text-t-lg text-white text-center after:block after:w-32 after:h-1 after:mt-10 after:bg-t-brown flex flex-col items-center">{service.text}</p>
+                                <Link href="/services-list" className="absolute -bottom-full group-hover:-bottom-16 -right-full group-hover:-right-16 w-28 md:w-40 h-28 md:h-40 bg-t-brown border-4 border-t-brown-light rounded-full flex items-start justify-start pt-6 pl-4 md:p-8 md:pt-12 duration-200 text-t-brown-light text-t-sm-bold">Більше</Link>
                             </li>
                         )
                     })}
