@@ -32,7 +32,7 @@ const ServicesList = () => {
     return (
         <PageWrap
             srcBackground="/images/services/scissors.webp"
-            title="Service list"
+            title="Мої послуги"
         >
             <section className={`container ${inter.className} pb-8`}>
                 <ul className="max-w-[800px] flex flex-col items-center gap-y-5 mx-auto py-10">

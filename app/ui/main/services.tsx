@@ -1,5 +1,8 @@
+'use client'
 import Image from "next/image";
 import Link from "next/link";
+import AnimatedWrap from "../common/animated-wrap";
+import { useRef } from "react";
 
 interface IServiceObj {
     alt: string,
@@ -29,14 +32,32 @@ const Services = () => {
             text: 'Жіноча стрижка, догляд за волоссям',
             image: '/images/services/hair-care.webp'
         },
-    ]
+    ];
+    const ref = useRef(null);
 
     return (
         <div className="bg-white mb-40 md:mb-72">
             <section className="container flex flex-col items-center py-6">
-                <p className="uppercase text-t-lg lg:mt-12">Мої</p>
-                <h2 className="uppercase text-t-xl text-t-brown mb-14">послуги</h2>
-                <ul className="grid grid-cols-2 sm:grid-cols-1 lg:grid-cols-2  2xl:grid-cols-4 gap-7">
+                <AnimatedWrap
+                    refTriggerBlock={ref}
+                    y="100px"
+                    opacity={0}
+                    duration={0.3}
+                    delay={0.2}
+                >
+                    <p className="uppercase text-t-lg lg:mt-12">Мої</p>
+                </AnimatedWrap>
+                <AnimatedWrap
+                    refTriggerBlock={ref}
+                    y="100px"
+                    opacity={0}
+                    duration={0.3}
+                    delay={0.3}
+                >
+                    <h2 className="uppercase text-t-xl text-t-brown mb-14">послуги</h2>
+                </AnimatedWrap>
+
+                <ul ref={ref} className="grid grid-cols-2 sm:grid-cols-1 lg:grid-cols-2  2xl:grid-cols-4 gap-7">
                     {serviceList.map((service, index) => {
                         return (
                             <li
@@ -50,8 +71,10 @@ const Services = () => {
                                     alt={service.alt}
                                     className="w-full h-full absolute top-0 left-0 -z-10 contrast-50 brightness-50 object-cover"
                                 />
-                                <p className="text-t-lg text-white text-center after:block after:w-32 after:h-1 after:mt-10 after:bg-t-brown flex flex-col items-center">{service.text}</p>
-                                <Link href="/services-list" className="absolute -bottom-full group-hover:-bottom-16 -right-full group-hover:-right-16 w-28 md:w-40 h-28 md:h-40 bg-t-brown border-4 border-t-brown-light rounded-full flex items-start justify-start pt-6 pl-4 md:p-8 md:pt-12 duration-200 text-t-brown-light text-t-sm-bold">Більше</Link>
+                                <p className="h-full text-t-md md:text-t-lg text-white text-center after:block after:w-full after:h-1 after:absolute after:bottom-0 after:bg-t-brown flex flex-col items-center">{service.text}</p>
+                                <Link href="/services-list" className="absolute -bottom-full group-hover:-bottom-20 -right-full group-hover:-right-20 w-28 md:w-40 h-28 md:h-40 bg-t-brown-light border-4 border-t-brown rounded-full pt-6 pl-4 md:p-8 md:pt-12 duration-200 text-t-black text-t-sm-semibold`">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z" fill="gray" /></svg>
+                                </Link>
                             </li>
                         )
                     })}

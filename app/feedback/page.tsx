@@ -8,7 +8,7 @@ export default async function Feedback() {
     return (
         <PageWrap
             srcBackground="/images/male-hair.webp"
-            title="Feedback"
+            title="Відгуки"
         >
             <section className="py-12 mx-auto flex flex-col items-center bg-t-brown-light">
                 <ul className="container grid grid-cols-1 md:grid-cols-2">

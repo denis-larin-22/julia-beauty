@@ -8,7 +8,7 @@ const AboutMe = () => {
     return (
         <PageWrap
             srcBackground="/images/about-me/bg1.webp"
-            title="About me"
+            title="Про мене"
         >
             <article className="container grid grid-cols-1 md:grid-cols-2 items-center gap-3 md:gap-10 py-5 md:py-0">
                 <AnimatedWrap

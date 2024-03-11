@@ -1,5 +1,4 @@
 import Image from "next/image"
-import Link from "next/link";
 import AnimatedWrap from "../common/animated-wrap";
 import { syne } from "../fonts";
 
@@ -14,14 +13,20 @@ const Banner = () => {
                     height={449}
                     className="absolute top-24 left-16 z-0 w-auto h-auto"
                 />
-                <Image
-                    src="/images/red-haired-girl.webp"
-                    alt="A girl with long red hair"
-                    width={614}
-                    height={787}
-                    priority
-                    className="absolute lg:static -bottom-4 left-6 md:left-32 z-20 brightness-75 w-auto h-auto"
-                />
+                <AnimatedWrap
+                    x="100px"
+                    opacity={0}
+                    duration={1}
+                >
+                    <Image
+                        src="/images/red-haired-girl.webp"
+                        alt="A girl with long red hair"
+                        width={614}
+                        height={787}
+                        priority
+                        className="absolute lg:static -bottom-4 left-6 md:left-32 z-20 brightness-75 w-auto h-auto"
+                    />
+                </AnimatedWrap>
 
                 <div className="max-w-full lg:max-w-[700px] bg-[#0000008a] lg:bg-transparent p-5 rounded-lg z-30 text-center lg:text-left mb-4 text-white">
                     <AnimatedWrap
