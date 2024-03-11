@@ -1,4 +1,4 @@
-import TLink from "../common/button";
+import TLink from "../common/link";
 import { getCommentsFromFirestoreDB } from "../../lib/firebase/feedback";
 
 export default async function Feedback() {

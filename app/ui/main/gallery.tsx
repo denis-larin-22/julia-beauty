@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import TLink from "../common/button";
+import TLink from "../common/link";
 
 const Gallery = () => {
     const galleryList: [string, string, string, string] = ['/images/gallery/gallery1.webp', '/images/gallery/gallery2.webp', '/images/gallery/gallery3.webp', '/images/gallery/gallery4.webp'];

@@ -1,12 +1,16 @@
-import Link from "next/link";
 import Carousel from "../../../ui/common/carousel";
 import PageWrap from "../../../ui/common/page-wrap";
-import { IWorkInfo, getWorkItemFromFirestoreDB, getWorksImagesFromStorage } from "../../../lib/firebase/gallery";
-import TLink from "../../../ui/common/button";
+import { getWorkItemFromFirestoreDB, getWorksImagesFromStorage } from "../../../lib/firebase/gallery";
+import TLink from "../../../ui/common/link";
+import { notFound } from "next/navigation";
 
 export default async function WorkItem({ params }: { params: { id: string } }) {
     const id = params.id;
     const workInfo = await getWorkItemFromFirestoreDB(id);
+    if (!workInfo) {
+        notFound();
+    };
+
     const imagesBefore = await getWorksImagesFromStorage(id, 'before');
     const imagesAfter = await getWorksImagesFromStorage(id, 'after');
 

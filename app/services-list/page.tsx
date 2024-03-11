@@ -5,7 +5,7 @@ import { inter } from "../ui/fonts";
 import Link from "next/link";
 import PageWrap from "../ui/common/page-wrap";
 import AnimatedWrap from "../ui/common/animated-wrap";
-import TLink from "../ui/common/button";
+import TLink from "../ui/common/link";
 
 const ServicesList = () => {
     const [toggleVissible, setToggleVissible] = useState(false);

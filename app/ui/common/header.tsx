@@ -2,11 +2,12 @@
 import Link from "next/link";
 import { CallIcon, InstagramIcon, MailIcon, TelegramIcon, ViberIcon } from "../assets/links-icons";
 import { Logo } from "../assets/logo";
-import { inter, openSans } from "../fonts";
+import { inter } from "../fonts";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { socialNetworksLinks } from "./social-networks-links";
 import AnimatedWrap from "./animated-wrap";
+import { AnimatePresence, motion } from "framer-motion";
 
 interface ILinkObj {
     name: string,
@@ -28,7 +29,7 @@ const Header = () => {
 
     return (
         <header
-            className="bg-white"
+            className="bg-white sticky top-0 z-50 md:static"
         >
             <div className={`bg-t-brown text-white ${inter.className} font-medium text-xs md:text-sm leading-[1.2em]`}>
 
@@ -81,7 +82,7 @@ const Header = () => {
                         <Link
                             href={link.href}
                             key={link.name}
-                            className={`uppercase text-t-sm-bold font-medium hover:text-t-brown-strong duration-100 ${pathname === link.href ? 'text-t-brown' : ''}`}
+                            className={`relative z-50 uppercase text-t-sm-bold font-medium hover:text-t-brown-strong duration-100 py-1 overflow-hidden ${pathname === link.href ? 'text-t-brown after:left-full hover:after:left-0' : ''} after:block after:w-full after:h-[2px] after:bg-t-brown after:absolute -after:bottom-1 after:left-full hover:after:left-0 after:duration-200`}
                         >
                             {link.name}
                         </Link>
@@ -96,52 +97,42 @@ const Header = () => {
                     <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" /></svg>
                 </button>
 
-                {toggleNavbar &&
-                    <div className="fixed top-0 right-0 z-50 bg-t-brown-light w-full h-full p-4 flex flex-col gap-8 pt-16 mobile">
-                        {links.map((link, index) => (
-                            <AnimatedWrap
-                                key={link.name}
-                                x={150}
-                                opacity={0}
-                                duration={0.4}
-                                delay={index - (0.92 * index)}
-                            >
-                                <Link
-                                    href={link.href}
-                                    onClick={() => setToggleNavbar(false)}
-                                    className={`uppercase text-t-sm-bold font-medium hover:text-t-brown-strong ${pathname === link.href && 'text-t-brown'}`}
+                <AnimatePresence>
+                    {toggleNavbar &&
+                        <motion.nav
+                            className="fixed top-0 right-0 z-50 w-screen h-screen flex flex-col items-center justify-center gap-8 pt-16 bg-t-brown-light origin-top-right"
+                            initial={{ rotate: '-90deg', opacity: 0, borderTopLeftRadius: '100%', borderBottomLeftRadius: '100%' }}
+                            animate={{ rotate: '0', opacity: 1, borderTopLeftRadius: '0', borderBottomLeftRadius: '0' }}
+                            exit={{ rotate: '-90deg', opacity: 0, borderTopLeftRadius: '100%', borderBottomLeftRadius: '100%' }}
+                            transition={{ duration: 0.5 }}
+                        >
+                            {links.map((link, index) => (
+                                <AnimatedWrap
+                                    key={link.name}
+                                    x={150}
+                                    opacity={0}
+                                    duration={0.4}
+                                    delay={index - (0.9 * index)}
                                 >
-                                    {link.name}
-                                </Link>
-                            </AnimatedWrap>
-                        ))}
-
-                        <AnimatedWrap
-                            y={20}
-                            opacity={0}
-                            delay={0.5}
-                            duration={0.5}
-                        >
-                            <ul className="flex items-center justify-center md:justify-normal gap-5 mt-6">
-                                {socialNetworksLinks.map((link, index) => (
-                                    <li
-                                        key={index}
-                                        className="hover:scale-125 duration-150"
+                                    <Link
+                                        href={link.href}
+                                        onClick={() => setToggleNavbar(false)}
+                                        className={`uppercase text-t-md hover:text-t-brown-strong ${pathname === link.href && 'text-t-brown'}`}
                                     >
-                                        <a href={link.href} target="_blank">{link.icon}</a>
-                                    </li>
-                                ))}
-                            </ul>
-                        </AnimatedWrap>
+                                        {link.name}
+                                    </Link>
+                                </AnimatedWrap>
+                            ))}
 
-                        <button
-                            className="absolute top-3 right-3 p-5"
-                            onClick={() => setToggleNavbar(false)}
-                        >
-                            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" /></svg>
-                        </button>
-                    </div>
-                }
+                            <button
+                                className="absolute top-3 right-3 p-5"
+                                onClick={() => setToggleNavbar(false)}
+                            >
+                                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" /></svg>
+                            </button>
+                        </motion.nav>
+                    }
+                </AnimatePresence>
             </nav>
         </header >
     )
