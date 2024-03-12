@@ -1,8 +1,8 @@
 import Image from "next/image";
-import Link from "next/link";
 import PageWrap from "../ui/common/page-wrap";
 import AnimatedWrap from "../ui/common/animated-wrap";
 import TLink from "../ui/common/link";
+import TextHighlighter from "../ui/common/text-highlighter";
 
 const AboutMe = () => {
     return (
@@ -17,8 +17,19 @@ const AboutMe = () => {
                     duration={0.5}
                 >
                     <div className="">
-                        <h2 className="text-t-xxl text-black border-b-2 border-t-brown w-fit mb-5 md:mb-11">Hello world</h2>
-                        <p className="text-t-sm-regular">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur quas rerum, beatae a nihil fugit. Similique, voluptate excepturi adipisci voluptates esse nemo hic. Eius beatae tenetur nobis obcaecati! Ab, nemo. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores, aspernatur accusantium alias nihil ex dolorum perferendis temporibus nostrum molestias laudantium saepe? Hic exercitationem ad delectus blanditiis aperiam. Repudiandae, voluptatibus temporibus.</p>
+                        <div className="flex items-center md:items-end gap-3 mb-5">
+                            <Image
+                                src="/images/about-me/avatar-admin.webp"
+                                width={128}
+                                height={128}
+                                alt="Фото парикмахера-стиліста Юлії"
+                                className="relative z-10 rounded-full mt-1 w-24 md:w-32 h-24 md:h-32 object-cover border-4 border-t-brown"
+                            />
+                            <p className="text-t-xxl text-black border-b-2 border-t-brown w-fit mb-5 md:mb-11">Привіт👋</p>
+
+                        </div>
+                        <p>Мене звуть <TextHighlighter>Юлія,</TextHighlighter> я професійний перукар-стиліст з більш ніж двадцятирічним досвідом роботи в індустрії краси. <TextHighlighter>Моє покликання</TextHighlighter> — створювати унікальні образи, втілюючи бажання моїх клієнтів в реальність. Працюючи <TextHighlighter>в Харкові,</TextHighlighter> я забезпечую високий рівень сервісу і професійного підходу <TextHighlighter>до кожного клієнта.</TextHighlighter></p>
+                        <p className="mt-3">Моя мета — не просто змінити ваш зовнішній вигляд, а підкреслити вашу <TextHighlighter>індивідуальність і неповторність.</TextHighlighter> Завдяки моєму багаторічному досвіду і постійному навчанню останнім тенденціям, я пропоную <TextHighlighter>широкий спектр послуг,</TextHighlighter> включаючи модні стрижки, фарбування, блонд, та багато інших послуг з догляду за волоссям.</p>
                     </div>
                 </AnimatedWrap>
                 <AnimatedWrap
@@ -56,7 +67,8 @@ const AboutMe = () => {
                     delay={0.9}
                 >
                     <div className="flex flex-col items-center gap-5">
-                        <p className="text-t-sm-regular">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur quas rerum, beatae a nihil fugit. Similique, voluptate excepturi adipisci voluptates esse nemo hic. Eius beatae tenetur nobis obcaecati! Ab, nemo. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores, aspernatur accusantium alias nihil ex dolorum perferendis temporibus nostrum molestias laudantium saepe? Hic exercitationem ad delectus blanditiis aperiam. Repudiandae, voluptatibus temporibus.</p>
+                        <p>Кожна моя робота ґрунтується на <TextHighlighter>увазі до деталей та індивідуальному підході</TextHighlighter> до кожного клієнта. Я прагну до того, щоб кожен, хто відвідує моє крісло, почував себе комфортно і виходив з впевненістю у своєму новому образі.</p>
+                        <p className="mt-3">Якщо ви шукаєте <TextHighlighter>досвідченого перукаря-стиліста у Харкові,</TextHighlighter> який допоможе вам оновити ваш стиль і підкреслити вашу красу, звертайтеся до мене. Я втілю <TextHighlighter>усі ваші мрії</TextHighlighter> про ідеальну зачіску у реальність!</p>
                         <TLink href="/gallery">Галерея</TLink>
                     </div>
                 </AnimatedWrap>

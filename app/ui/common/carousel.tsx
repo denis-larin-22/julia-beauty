@@ -35,7 +35,7 @@ const Carousel = ({ srcImagesArray, wrapStyles }: IProps) => {
 
     return (
         <div
-            className={fullSizeImage ? "fixed top-0 left-0 z-30 h-screen w-screen flex items-center justify-center bg-[#000000ce]" : `relative flex items-center justify-center gap-1 md:gap-4 ${wrapStyles}`}
+            className={fullSizeImage ? "fixed top-0 left-0 z-50 h-screen w-screen flex items-center justify-center bg-[#000000ce]" : `relative flex items-center justify-center gap-1 md:gap-4 ${wrapStyles}`}
             onClick={(e) => {
                 if (e.currentTarget === e.target) setFullSizeImage(false);
             }}
@@ -53,7 +53,8 @@ const Carousel = ({ srcImagesArray, wrapStyles }: IProps) => {
                         width={384}
                         height={600}
                         src={path}
-                        alt="Photos of works from the portfolio"
+                        alt="Фото робіт з галереї"
+                        title="Відкрити на весь екран"
                         onClick={() => setFullSizeImage(true)}
                         className={`h-fit max-h-screen w-full object-contain cursor-pointer ${currentIndexImage === index ? 'inline' : 'hidden'}`}
                     />

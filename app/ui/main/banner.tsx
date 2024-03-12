@@ -55,7 +55,6 @@ const Banner = () => {
                         delay={1}
                         duration={0.5}
                     >
-                        {/* <Link href="/about-me" className="bg-t-black hover:bg-black rounded-lg py-3 px-6 text-white">Про мене »</Link> */}
                         <h3 className="text-t-md">
                             Зануртеся у світ краси та догляду, де кожен момент - це можливість відчути себе особливою.
                         </h3>

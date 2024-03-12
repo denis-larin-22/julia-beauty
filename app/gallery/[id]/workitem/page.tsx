@@ -30,12 +30,12 @@ export default async function WorkItem({ params }: { params: { id: string } }) {
                     <Carousel srcImagesArray={imagesAfter} />
                 </div>
 
-                <div className="max-w-[55em] mt-6">
-                    <h4 className="text-t-xxl text-t-brown">{workInfo.name}</h4>
+                <div className="max-w-[450px]">
+                    <h4 className="text-t-xxl text-t-brown my-6">{workInfo.name}</h4>
                     <p>{workInfo.description}</p>
 
                     <div className="flex flex-col gap-5 flex-wrap mt-5">
-                        {[{ href: '/gallery', text: 'Галерея' }, { href: '/contacts', text: 'Записатися' }].map((link) => (
+                        {[{ href: '/contacts', text: 'Записатися' }, { href: '/gallery', text: 'Галерея' }].map((link) => (
                             <TLink href={link.href}>{link.text}</TLink>
                         ))}
                     </div>

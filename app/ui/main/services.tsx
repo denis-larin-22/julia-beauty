@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import AnimatedWrap from "../common/animated-wrap";
 import { useRef } from "react";
+import { motion } from "framer-motion";
 
 interface IServiceObj {
     alt: string,
@@ -60,9 +61,17 @@ const Services = () => {
                 <ul ref={ref} className="grid grid-cols-2 sm:grid-cols-1 lg:grid-cols-2  2xl:grid-cols-4 gap-7">
                     {serviceList.map((service, index) => {
                         return (
-                            <li
+                            <motion.li
                                 key={index}
                                 className="group relative z-0 w-36 sm:w-[329px] h-36 sm:h-[290px] p-3 sm:p-7 py-4 sm:py-10 border-[1px] border-[#F1F1F1] rounded-xl shadow-xl overflow-hidden flex flex-col items-center gap-5"
+                                animate={{ scale: [1, 1.03, 1] }}
+                                transition={{
+                                    duration: 0.5,
+                                    delay: index - (0.6 * index),
+                                    ease: "easeInOut",
+                                    repeat: Infinity,
+                                    repeatDelay: 5
+                                }}
                             >
                                 <Image
                                     width={329}
@@ -75,7 +84,7 @@ const Services = () => {
                                 <Link href="/services-list" className="absolute -bottom-full group-hover:-bottom-20 -right-full group-hover:-right-20 w-28 md:w-40 h-28 md:h-40 bg-t-brown-light border-4 border-t-brown rounded-full pt-6 pl-4 md:p-8 md:pt-12 duration-200 text-t-black text-t-sm-semibold`">
                                     <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z" fill="gray" /></svg>
                                 </Link>
-                            </li>
+                            </motion.li>
                         )
                     })}
                 </ul>
