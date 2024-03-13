@@ -52,6 +52,7 @@ const AboutMe = () => {
                     duration={0.5}
                     delay={0.6}
                 >
+                    {/* Нужно поменять картинку */}
                     <Image
                         src="/images/about-me/bg3.webp"
                         width={600}

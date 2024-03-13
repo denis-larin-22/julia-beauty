@@ -39,8 +39,8 @@ const Contacts = () => {
                         opacity={0}
                         duration={0.6}
                     >
-                        <h4 className="text-t-xl mb-5">Адрес</h4>
-                        <p className="text-t-md font-normal text-gray-500 max-w-64">вул. Маршала Бажанова, 4, Харків, Украина, 61002</p>
+                        <h4 className="text-t-xl mb-5">Адреса</h4>
+                        <p className="text-t-md font-normal text-gray-500 max-w-64">Адреса</p>
                     </AnimatedWrap>
 
                     <AnimatedWrap
