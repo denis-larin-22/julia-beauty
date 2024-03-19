@@ -3,6 +3,20 @@ import PageWrap from "../ui/common/page-wrap";
 import AnimatedWrap from "../ui/common/animated-wrap";
 import TLink from "../ui/common/link";
 import TextHighlighter from "../ui/common/text-highlighter";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: 'Про мене | Julia Magic Beauty',
+    description: 'Моя мета — не просто змінити ваш зовнішній вигляд, а підкреслити вашу індивідуальність і неповторність. Завдяки моєму багаторічному досвіду і постійному навчанню останнім тенденціям, я пропоную широкий спектр послуг, включаючи сучасні модні стрижки, фарбування різних видів, блонд, та багато інших послуг з догляду за волоссям.',
+    openGraph: {
+        title: 'Про мене | Julia Magic Beauty',
+        description: 'Моя мета — не просто змінити ваш зовнішній вигляд, а підкреслити вашу індивідуальність і неповторність. Завдяки моєму багаторічному досвіду і постійному навчанню останнім тенденціям, я пропоную широкий спектр послуг, включаючи сучасні модні стрижки, фарбування різних видів, блонд, та багато інших послуг з догляду за волоссям.',
+        type: 'website',
+        locale: 'uk_UA',
+        url: '',
+        siteName: 'Julia Magic Beauty'
+    }
+};
 
 const AboutMe = () => {
     return (
@@ -29,7 +43,7 @@ const AboutMe = () => {
 
                         </div>
                         <p>Мене звуть <TextHighlighter>Юлія,</TextHighlighter> я професійний перукар-стиліст з більш ніж двадцятирічним досвідом роботи в індустрії краси. <TextHighlighter>Моє покликання</TextHighlighter> — створювати унікальні образи, втілюючи бажання моїх клієнтів в реальність. Працюючи <TextHighlighter>в Харкові,</TextHighlighter> я забезпечую високий рівень сервісу і професійного підходу <TextHighlighter>до кожного клієнта.</TextHighlighter></p>
-                        <p className="mt-3">Моя мета — не просто змінити ваш зовнішній вигляд, а підкреслити вашу <TextHighlighter>індивідуальність і неповторність.</TextHighlighter> Завдяки моєму багаторічному досвіду і постійному навчанню останнім тенденціям, я пропоную <TextHighlighter>широкий спектр послуг,</TextHighlighter> включаючи модні стрижки, фарбування, блонд, та багато інших послуг з догляду за волоссям.</p>
+                        <p className="mt-3">Моя мета — не просто змінити ваш зовнішній вигляд, а підкреслити вашу <TextHighlighter>індивідуальність і неповторність.</TextHighlighter> Завдяки моєму багаторічному досвіду і постійному навчанню останнім тенденціям, я пропоную <TextHighlighter>широкий спектр послуг,</TextHighlighter> включаючи сучасні модні стрижки, фарбування різних видів, блонд, та багато інших послуг з догляду за волоссям.</p>
                     </div>
                 </AnimatedWrap>
                 <AnimatedWrap
@@ -39,11 +53,11 @@ const AboutMe = () => {
                     delay={0.3}
                 >
                     <Image
-                        src="/images/about-me/bg2.webp"
+                        src="/images/about-me/bg3.webp"
                         width={600}
                         height={600}
                         alt="Tools for haircut"
-                        className="mx-auto md:m-0 w-auto h-auto"
+                        className="mx-auto md:m-0 order-last md:order-none w-auto h-auto"
                     />
                 </AnimatedWrap>
                 <AnimatedWrap
@@ -52,13 +66,12 @@ const AboutMe = () => {
                     duration={0.5}
                     delay={0.6}
                 >
-                    {/* Нужно поменять картинку */}
                     <Image
-                        src="/images/about-me/bg3.webp"
+                        src="/images/about-me/bg2.webp"
                         width={600}
                         height={600}
                         alt="Tools for haircut"
-                        className="mx-auto md:m-0 order-last md:order-none w-auto h-auto"
+                        className="mx-auto md:m-0 w-auto h-auto"
                     />
                 </AnimatedWrap>
                 <AnimatedWrap

@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     url: '',
     siteName: 'Julia Magic Beauty'
   }
-}
+};
 
 export default function Home() {
   return (

@@ -1,13 +1,14 @@
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "./firebase-config";
 
-interface IServiceItem {
+export interface IServiceItem {
+    room: 'male' | 'female',
     name: string,
     description: string,
     price: string
 };
 
-type ServiceList = Array<IServiceItem>;
+export type ServiceList = Array<IServiceItem>;
 
 export const getServiceListFromFirestoreDB = async (): Promise<ServiceList> => {
     try {
@@ -16,6 +17,7 @@ export const getServiceListFromFirestoreDB = async (): Promise<ServiceList> => {
 
         const servicesArray: ServiceList = data.docs.map((doc) => ({
             id: doc.id,
+            room: doc.data().room,
             name: doc.data().name,
             description: doc.data().description,
             price: doc.data().price

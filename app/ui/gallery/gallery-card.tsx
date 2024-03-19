@@ -24,7 +24,7 @@ export default function GalleryCard({ work }: { work: IWorkCard }) {
                     </svg>
                 </Link>
             </div>
-            <h6 className="absolute top-3/4 w-full h-full p-1 md:p-2 text-xs sm:text-t-md md:text-t-sm-semibold text-gray-200 text-left bg-[#00000095]">{work.name}</h6>
+            <h5 className="absolute top-3/4 w-full h-full p-1 md:p-2 text-xs sm:text-t-md md:text-t-sm-semibold text-gray-200 text-left bg-[#00000095]">{work.name}</h5>
         </div>
     );
 }
