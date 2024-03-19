@@ -4,8 +4,8 @@ import { syne } from "../fonts";
 
 const Banner = () => {
     return (
-        <div className="h-96 md:h-[586px] bg-t-brown">
-            <section className="h-full relative container overflow-hidden flex items-end lg:items-center justify-center lg:justify-between">
+        <section className="h-96 md:h-[586px] bg-t-brown">
+            <div className="h-full relative container overflow-hidden flex items-end lg:items-center justify-center lg:justify-between">
                 <Image
                     src="/images/circles-group.webp"
                     alt="Decoration image of circles"
@@ -28,7 +28,7 @@ const Banner = () => {
                     />
                 </AnimatedWrap>
 
-                <div className="max-w-full lg:max-w-[700px] bg-[#0000008a] lg:bg-transparent p-5 rounded-lg z-30 text-center lg:text-left mb-4 text-white">
+                <div className="max-w-full lg:max-w-[700px] bg-t-glass lg:bg-transparent p-5 rounded-lg z-30 text-center lg:text-left mb-4 text-white">
                     <AnimatedWrap
                         y={"-50px"}
                         opacity={0}
@@ -60,8 +60,8 @@ const Banner = () => {
                         </h3>
                     </AnimatedWrap>
                 </div>
-            </section>
-        </div>
+            </div>
+        </section >
     )
 }
 

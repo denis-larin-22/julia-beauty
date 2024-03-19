@@ -36,7 +36,7 @@ const Footer = () => {
                     </nav>
                     <div className="flex flex-col gap-4">
                         <div className="flex items-center gap-4">
-                            <a href="https://t.me/jyliya24" target="_blank">
+                            <a href="https://www.t.me/jyliya24" target="_blank">
                                 <TelegramIcon />
                             </a>
                             <a href="https://www.instagram.com/julia_magicbeautiful/?igsh=eXo5cGQxdDR5OWZh" target="_blank">
@@ -56,11 +56,6 @@ const Footer = () => {
             </div>
         </footer >
     )
-
-
-
-    // OPENSANS поставь на весь сайт а старій в тех местах гле нужен!!!!!
-
 }
 
 export default Footer; 

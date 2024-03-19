@@ -1,5 +1,4 @@
-import { CallIcon, InstagramIcon, MailIcon, TelegramIcon } from "../assets/links-icons";
-import { inter } from "../fonts";
+import { InstagramIcon, MailIcon, TelegramIcon } from "../assets/links-icons";
 
 interface IIconObj {
     icon: JSX.Element;
@@ -25,13 +24,13 @@ const Contacts = () => {
     return (
         <div className="bg-white">
             <section className="container py-8 md:py-24 grid grid-cols-1 md:grid-cols-2 items-center gap-5">
-                <div className="text-t-sm-regular">
-                    <p className="text-t-md uppercase">Зв'язок зі мною</p>
-                    <h4 className="text-t-xl text-t-brown uppercase mb-7">Мої контакти</h4>
-                    <p className="mb-7 text-t-md">Запрошую вас до світу краси та догляду за собою і з нетерпінням чекаю на ваш візит!</p>
-                    <a href="tel:380667718657" className="text-t-lg font-normal">+38 066 771 86 57</a>
+                <div className="text-t-md">
+                    <p className="uppercase">Зв'язок зі мною</p>
+                    <h4 className="text-t-xl text-t-brown uppercase mb-4">Мої контакти</h4>
+                    <a href="tel:380667718657" className="text-t-lg">+38 066 771 86 57</a>
+                    <p className="my-4">вул. Валентинівська 37/128</p>
 
-                    <ul className="flex items-center justify-center md:justify-normal gap-5 mt-5">
+                    <ul className="flex items-center justify-center md:justify-normal gap-5 my-4">
                         {socialNetworksLinks.map((link, index) => (
                             <li
                                 key={index}
@@ -42,6 +41,7 @@ const Contacts = () => {
                         ))}
                     </ul>
 
+                    <p>Запрошую вас до світу краси та догляду за собою і з нетерпінням чекаю на ваш візит!</p>
                 </div>
                 <div className="max-w-[600px] h-[250px] md:h-[450px]">
                     <iframe

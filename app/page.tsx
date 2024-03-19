@@ -8,7 +8,7 @@ import Services from "./ui/main/services";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: 'Перукар-стиліст Харків | Стрижка | Фарбування | Перукар Харків | Догляд за волоссям | Julia Magic Beauty',
+  title: 'Перукар-стиліст Харків | Стрижка | Фарбування | Перукар Харків | Фарбування',
   description: 'Julia Magic Beauty – ваш ідеальний парикмахер та стиліст у Харкові. Відкрийте для себе неповторну красу та стиль. Запишіться на послуги вже зараз та насолоджуйтеся відчуттям нового образу!',
   openGraph: {
     title: 'Julia Magic Beauty - перукар-стиліст у Харкові',

@@ -52,9 +52,13 @@ const config: Config = {
         't-black': '#202020',
         't-gray': '#525252',
         't-pale': '#E9E9E9',
+        't-glass': '#0000008a'
       },
       maxWidth: {
         't-maxScreen': '1920px',
+      },
+      backgroundImage: {
+        't-dark-gradient': 'linear-gradient(to bottom, rgb(0 0 0 / 0%), rgb(0 0 0 / 80%))'
       }
     },
   },

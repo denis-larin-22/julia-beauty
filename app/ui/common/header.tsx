@@ -1,6 +1,6 @@
 'use client'
 import Link from "next/link";
-import { CallIcon, InstagramIcon, MailIcon, TelegramIcon, ViberIcon } from "../assets/links-icons";
+import { CallIcon, InstagramIcon, MailIcon, TelegramIcon } from "../assets/links-icons";
 import { Logo } from "../assets/logo";
 import { inter } from "../fonts";
 import { usePathname } from "next/navigation";
@@ -48,7 +48,7 @@ const Header = () => {
 
                     <div className="flex items-center gap-4">
                         <p className="hidden md:inline">Follow me:</p>
-                        <a href="https://t.me/jyliya24" target="_blank">
+                        <a href="https://www.t.me/jyliya24" target="_blank">
                             <TelegramIcon />
                         </a>
                         <a href="https://www.instagram.com/julia_magicbeautiful/?igsh=eXo5cGQxdDR5OWZh" target="_blank">

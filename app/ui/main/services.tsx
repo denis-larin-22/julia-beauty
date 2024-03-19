@@ -7,31 +7,31 @@ import { motion } from "framer-motion";
 
 interface IServiceObj {
     alt: string,
-    text: string,
+    text: string[],
     image: string
 }
 
 const Services = () => {
     const serviceList: Array<IServiceObj> = [
         {
-            alt: 'Blonding in Kharkiv',
-            text: 'Блондування, спец-блонд, тотал-блонд',
-            image: '/images/services/coloring.webp'
+            alt: 'Жіноча стрижка у Харкові',
+            text: ['• жіноча стрижка', '• догляд за волоссям'],
+            image: '/images/services/hair-care.webp'
         },
         {
-            alt: 'Hair coloring technique airtouch',
-            text: 'Фарбування коренів, однотонне фарбування',
-            image: '/images/services/airtouch.webp'
-        },
-        {
-            alt: 'Male haircut',
-            text: 'Чоловіча стрижка, дитяча стрижка',
+            alt: 'Чоловіча стрижка у Харкові',
+            text: ['• чоловіча стрижка', '• дитяча стрижка'],
             image: '/images/services/male-haircut.webp'
         },
         {
-            alt: 'Hair care',
-            text: 'Жіноча стрижка, догляд за волоссям',
-            image: '/images/services/hair-care.webp'
+            alt: 'Фарбування волосся',
+            text: ['• однотонне фарбування', '• фарбування коренів'],
+            image: '/images/services/airtouch.webp'
+        },
+        {
+            alt: 'Блондування в Харкові',
+            text: ['• блондування', '• спец-блонд', '• тотал-блонд'],
+            image: '/images/services/coloring.webp'
         },
     ];
     const ref = useRef(null);
@@ -63,27 +63,26 @@ const Services = () => {
                         return (
                             <motion.li
                                 key={index}
-                                className="group relative z-0 w-36 sm:w-[329px] h-36 sm:h-[290px] p-3 sm:p-7 py-4 sm:py-10 border-[1px] border-[#F1F1F1] rounded-xl shadow-xl overflow-hidden flex flex-col items-center gap-5"
-                                animate={{ scale: [1, 1.03, 1] }}
-                                transition={{
-                                    duration: 0.5,
-                                    delay: index - (0.6 * index),
-                                    ease: "easeInOut",
-                                    repeat: Infinity,
-                                    repeatDelay: 5
-                                }}
+                                className="group relative z-0 w-36 sm:w-[329px] h-36 sm:h-[290px] rounded-xl shadow-xl overflow-hidden flex flex-col items-center gap-5 border-4 border-[#F1F1F1] hover:border-t-brown"
+
                             >
                                 <Image
                                     width={329}
                                     height={290}
                                     src={service.image}
                                     alt={service.alt}
-                                    className="w-full h-full absolute top-0 left-0 -z-10 contrast-50 brightness-50 object-cover"
+                                    className="w-full h-full absolute top-0 left-0 -z-10 contrast-50 brightness-50 object-cover group-hover:scale-110 duration-150"
                                 />
-                                <p className="h-full text-t-md md:text-t-lg text-white text-center after:block after:w-full after:h-1 after:absolute after:bottom-0 after:bg-t-brown flex flex-col items-center">{service.text}</p>
-                                <Link href="/services-list" className="absolute -bottom-full group-hover:-bottom-20 -right-full group-hover:-right-20 w-28 md:w-40 h-28 md:h-40 bg-t-brown-light border-4 border-t-brown rounded-full pt-6 pl-4 md:p-8 md:pt-12 duration-200 text-t-black text-t-sm-semibold`">
-                                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z" fill="gray" /></svg>
+                                <Link
+                                    href="/services-list"
+                                    scroll
+                                    className="h-10 w-10 rounded-full bg-t-glass flex items-center justify-center cursor-pointer opacity-0 group-hover:opacity-100 duration-150 -translate-y-10 group-hover:translate-y-1"
+                                >
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M419-80q-28 0-52.5-12T325-126L107-403l19-20q20-21 48-25t52 11l74 45v-328q0-17 11.5-28.5T340-760q17 0 29 11.5t12 28.5v472l-97-60 104 133q6 7 14 11t17 4h221q33 0 56.5-23.5T720-240v-160q0-17-11.5-28.5T680-440H461v-80h219q50 0 85 35t35 85v160q0 66-47 113T640-80H419ZM167-620q-13-22-20-47.5t-7-52.5q0-83 58.5-141.5T340-920q83 0 141.5 58.5T540-720q0 27-7 52.5T513-620l-69-40q8-14 12-28.5t4-31.5q0-50-35-85t-85-35q-50 0-85 35t-35 85q0 17 4 31.5t12 28.5l-69 40Zm335 280Z" fill="gray" /></svg>
                                 </Link>
+                                <div className="absolute -bottom-full group-hover:bottom-0 w-full min-h-fit p-2 text-start text-t-sm-semibold text-t-brown-light opacity-0 group-hover:opacity-100 duration-300 bg-t-glass">
+                                    {service.text.map((text, index) => <p key={index} className=" ">{text}</p>)}
+                                </div>
                             </motion.li>
                         )
                     })}
