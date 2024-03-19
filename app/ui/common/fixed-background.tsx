@@ -11,7 +11,7 @@ const FixedBackground = ({ srcImage }: IProps) => {
             height={500}
             alt="Background image with fixed effect"
             src={srcImage}
-            className="min-h-[500px] w-full fixed top-0 left-0 object-cover -z-10 brightness-75"
+            className="h-full w-full fixed top-0 left-0 object-cover -z-10 brightness-75"
         />
     )
 }

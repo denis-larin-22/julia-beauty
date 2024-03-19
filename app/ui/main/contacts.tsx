@@ -23,7 +23,7 @@ const Contacts = () => {
 
     return (
         <div className="bg-white">
-            <section className="container py-8 md:py-24 grid grid-cols-1 md:grid-cols-2 items-center gap-5">
+            <section className="container py-8 md:py-20 grid grid-cols-1 md:grid-cols-2 items-center gap-5">
                 <div className="text-t-md">
                     <p className="uppercase">Зв'язок зі мною</p>
                     <h4 className="text-t-xl text-t-brown uppercase mb-4">Мої контакти</h4>
@@ -41,7 +41,6 @@ const Contacts = () => {
                         ))}
                     </ul>
 
-                    <p>Запрошую вас до світу краси та догляду за собою і з нетерпінням чекаю на ваш візит!</p>
                 </div>
                 <div className="max-w-[600px] h-[250px] md:h-[450px]">
                     <iframe
@@ -51,6 +50,7 @@ const Contacts = () => {
                         referrerPolicy="no-referrer-when-downgrade"
                     ></iframe>
                 </div>
+                <p className="text-t-lg text-center py-4 col-span-1 md:col-span-2">Запрошую вас до світу краси та догляду за собою і з нетерпінням чекаю на ваш візит!</p>
             </section>
         </div>
     )
