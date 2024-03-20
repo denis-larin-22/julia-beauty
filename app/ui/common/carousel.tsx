@@ -35,13 +35,13 @@ const Carousel = ({ srcImagesArray, wrapStyles }: IProps) => {
 
     return (
         <div
-            className={fullSizeImage ? "fixed top-0 left-0 z-50 h-screen w-screen flex items-center justify-center bg-[#000000ce]" : `relative flex items-center justify-center gap-1 md:gap-4 ${wrapStyles}`}
+            className={fullSizeImage ? "fixed top-0 left-0 z-50 h-screen w-screen flex items-center justify-center bg-[#000000ce]" : `relative flex items-center justify-center gap-1 md:gap-4 drop-shadow-2xl ${wrapStyles}`}
             onClick={(e) => {
                 if (e.currentTarget === e.target) setFullSizeImage(false);
             }}
         >
             <button
-                className={`${syne.className} w-8 h-8 flex items-center justify-center bg-transparent md:bg-t-brown hover:scale-105 active:scale-90 duration-150 rounded-full text-black md:text-white  text-2xl ${fullSizeImage && 'absolute left-0 md:left-[2%] bg-transparent text-4xl text-gray-400'}`}
+                className={`${syne.className} w-8 h-8 flex items-center justify-center bg-transparent md:bg-t-brown hover:scale-105 active:scale-90 duration-150 rounded-full text-black md:text-white  text-2xl drop-shadow-2xl ${fullSizeImage && 'absolute left-0 md:left-[2%] bg-transparent text-4xl text-gray-400'}`}
                 onClick={() => switchImage("prev")}
             >
                 {'<'}
@@ -70,7 +70,7 @@ const Carousel = ({ srcImagesArray, wrapStyles }: IProps) => {
                 ))}
             </ul>
             <button
-                className={`${syne.className} w-8 h-8 flex items-center justify-center bg-transparent md:bg-t-brown hover:scale-105 active:scale-90 duration-150 rounded-full text-black md:text-white  text-2xl ${fullSizeImage && 'absolute right-0 md:right-[2%] bg-transparent text-4xl text-gray-400'}`}
+                className={`${syne.className} w-8 h-8 flex items-center justify-center bg-transparent md:bg-t-brown hover:scale-105 active:scale-90 duration-150 rounded-full text-black md:text-white  text-2xl drop-shadow-2xl ${fullSizeImage && 'absolute right-0 md:right-[2%] bg-transparent text-4xl text-gray-400'}`}
                 onClick={() => switchImage("next")}
             >
                 {'>'}

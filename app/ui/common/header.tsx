@@ -33,10 +33,10 @@ const Header = () => {
         >
             <div className={`bg-t-brown text-white ${inter.className} font-medium text-xs md:text-sm leading-[1.2em]`}>
 
-                {/* contacts desktop*/}
-                <div className="hidden md:flex justify-between items-center container py-4">
+                {/* ontacts desktop*/}
+                <nav className="hidden md:flex justify-between items-center container py-4">
                     <div className="flex items-center gap-10">
-                        <a href="https://www.google.com/intl/ru/gmail/about/" target="_blank" className="hidden sm:flex items-center gap-3">
+                        <a href="https://www.google.com/intl/uk/gmail/about/" target="_blank" className="hidden sm:flex items-center gap-3">
                             <MailIcon />
                             yarmakulia5@gmail.com
                         </a>
@@ -47,7 +47,6 @@ const Header = () => {
                     </div>
 
                     <div className="flex items-center gap-4">
-                        <p className="hidden md:inline">Follow me:</p>
                         <a href="https://www.t.me/jyliya24" target="_blank">
                             <TelegramIcon />
                         </a>
@@ -55,22 +54,22 @@ const Header = () => {
                             <InstagramIcon />
                         </a>
                     </div>
-                </div>
+                </nav>
 
-                {/* contacts mobile*/}
-                <ul className="md:hidden fixed bottom-0 left-0 z-50 w-full bg-t-brown py-2 flex items-center justify-center gap-5">
+                {/* Contacts mobile*/}
+                <nav className="md:hidden fixed bottom-0 left-0 z-50 w-full bg-t-brown py-2 flex items-center justify-center gap-5">
                     {socialNetworksLinks.map((link, index) => (
-                        <li
+                        <a
                             key={index}
+                            href={link.href}
+                            target="_blank"
                             className="hover:scale-125 duration-150"
-                        >
-                            <a href={link.href} target="_blank">{link.icon}</a>
-                        </li>
+                        >{link.icon}</a>
                     ))}
-                </ul>
+                </nav>
             </div >
 
-            {/* nav */}
+            {/*Desktop website nav */}
             <nav className="container relative py-2 md:py-5 flex justify-between lg:justify-around items-center border-t-4 border-t-brown md:border-0">
                 <Link
                     href="/"
@@ -89,7 +88,7 @@ const Header = () => {
                     ))}
                 </div>
 
-                {/* Mobile */}
+                {/* Mobile website nav*/}
                 <button
                     className="inline-block lg:hidden p-5"
                     onClick={() => setToggleNavbar(true)}

@@ -2,24 +2,42 @@ import AnimatedWrap from "../ui/common/animated-wrap";
 import { Logo } from "../ui/assets/logo";
 import { inter } from "../ui/fonts";
 import PageWrap from "../ui/common/page-wrap";
-import { InstagramIcon, MailIcon, TelegramIcon, ViberIcon } from "../ui/assets/links-icons";
+import { InstagramIcon, MailIcon, TelegramIcon } from "../ui/assets/links-icons";
+import { Metadata } from "next";
 
 interface IIconObj {
-    icon: JSX.Element;
-    href: string;
+    name: string,
+    icon: JSX.Element,
+    href: string
 }
+
+export const metadata: Metadata = {
+    title: 'Контакти | Julia Magic Beauty',
+    description: 'Julia Magic Beauty - перукар-стиліст у Харкові. Контакти та адреса салону.',
+    openGraph: {
+        title: 'Контакти | Julia Magic Beauty',
+        description: 'Julia Magic Beauty - перукар-стиліст у Харкові. Контакти та адреса салону.',
+        type: 'website',
+        locale: 'uk_UA',
+        url: '',
+        siteName: 'Julia Magic Beauty'
+    }
+};
 
 const Contacts = () => {
     const socialNetworksLinks: IIconObj[] = [
         {
+            name: 'Telegram',
             icon: <TelegramIcon color="black" />,
             href: 'https://t.me/jyliya24'
         },
         {
+            name: 'Instagram',
             icon: <InstagramIcon color="black" />,
             href: 'https://www.instagram.com/julia_magicbeautiful/?igsh=eXo5cGQxdDR5OWZh'
         },
         {
+            name: 'email',
             icon: <MailIcon color="black" />,
             href: 'https://www.google.com/intl/ru/gmail/about/'
         },
@@ -28,7 +46,7 @@ const Contacts = () => {
     return (
         <PageWrap
             srcBackground="/images/contacts/scissors.webp"
-            title="Contacts"
+            title="Контакти"
         >
             <section className="container grid grid-cols-1 md:grid-cols-2 gap-5 p-5 md:p-10">
                 <div className={`${inter.className} flex flex-col gap-5`}>
@@ -40,7 +58,7 @@ const Contacts = () => {
                         duration={0.6}
                     >
                         <h4 className="text-t-xl mb-5">Адреса</h4>
-                        <p className="text-t-md font-normal text-gray-500 max-w-64">Адреса</p>
+                        <p className="text-t-md font-normal text-gray-500">вул. Валентинівська 37/128</p>
                     </AnimatedWrap>
 
                     <AnimatedWrap
@@ -65,7 +83,13 @@ const Contacts = () => {
                                     key={index}
                                     className="hover:scale-125 duration-150"
                                 >
-                                    <a href={link.href} target="_blank">{link.icon}</a>
+                                    <a
+                                        href={link.href}
+                                        target="_blank"
+                                        title={`Посилання на ${link.name}`}
+                                    >
+                                        {link.icon}
+                                    </a>
                                 </li>
                             ))}
                         </ul>

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 interface IWorkCard {
@@ -9,12 +10,12 @@ interface IWorkCard {
 export default function GalleryCard({ work }: { work: IWorkCard }) {
     return (
         <div className="group relative h-full rounded-xl shadow-xl overflow-hidden flex flex-col hover:shadow-md hover:shadow-black">
-            <img
+            <Image
                 width={200}
                 height={256}
                 src={work.image}
                 loading="lazy"
-                alt="The photo of work from portfolio"
+                alt="Фото роботі із галереї"
                 className="w-full h-full rounded-xl object-cover brightness-75 group-hover:brightness-50 all duration-150"
             />
             <div className="flex items-center justify-center h-full absolute inset-0">

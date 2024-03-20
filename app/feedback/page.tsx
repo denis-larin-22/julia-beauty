@@ -1,6 +1,20 @@
+import { Metadata } from "next";
 import { getCommentsFromFirestoreDB } from "../lib/firebase/feedback";
 import AnimatedWrap from "../ui/common/animated-wrap";
 import PageWrap from "../ui/common/page-wrap";
+
+export const metadata: Metadata = {
+    title: 'Відгуки | Julia Magic Beauty',
+    description: 'Julia Magic Beauty - перукар-стиліст у Харкові. Відгуки від клієнтів.',
+    openGraph: {
+        title: 'Відгуки | Julia Magic Beauty',
+        description: 'Julia Magic Beauty - перукар-стиліст у Харкові. Відгуки від клієнтів.',
+        type: 'website',
+        locale: 'uk_UA',
+        url: '',
+        siteName: 'Julia Magic Beauty'
+    }
+};
 
 export default async function Feedback() {
     const commentsList = await getCommentsFromFirestoreDB();
@@ -11,11 +25,10 @@ export default async function Feedback() {
             title="Відгуки"
         >
             <section className="py-12 mx-auto flex flex-col items-center bg-t-brown-light">
-                <ul className="container grid grid-cols-1 md:grid-cols-2">
+                <ul className="container grid grid-cols-1 md:grid-cols-2 gap-4">
                     {commentsList.map((item, index) => (
                         <li
                             key={index}
-                            className="hover:scale-105 duration-150"
                         >
                             <AnimatedWrap
                                 x={100}
