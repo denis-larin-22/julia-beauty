@@ -57,7 +57,7 @@ const AboutMe = () => {
                         width={600}
                         height={600}
                         alt="Tools for haircut"
-                        className="mx-auto md:m-0 order-last md:order-none w-auto h-auto"
+                        className="mx-auto md:m-0 order-last md:order-none w-[600px] h-auto"
                     />
                 </AnimatedWrap>
                 <AnimatedWrap
@@ -71,7 +71,7 @@ const AboutMe = () => {
                         width={600}
                         height={600}
                         alt="Tools for haircut"
-                        className="mx-auto md:m-0 w-auto h-auto"
+                        className="mx-auto md:m-0 w-[600px] h-auto"
                     />
                 </AnimatedWrap>
                 <AnimatedWrap
