@@ -4,7 +4,7 @@ import TLink from "../ui/common/link";
 import { getServiceListFromFirestoreDB } from "../lib/firebase/services-list";
 import Image from "next/image";
 import { Metadata } from "next";
-import ServicesList from "../ui/serveces-list/services-list";
+import ServicesList from "../ui/services-list/services-list";
 
 export const metadata: Metadata = {
     title: 'Мої послуги | Julia Magic Beauty',
@@ -27,7 +27,7 @@ export default async function ServiceList() {
             srcBackground="/images/services/scissors.webp"
             title="Мої послуги"
         >
-            <section className={`container ${inter.className} pb-8`}>
+            <section className="container pb-8">
                 <ServicesList list={servicesList} />
 
                 <TLink href="/contacts" wrapStyles="mx-auto">Запис</TLink>

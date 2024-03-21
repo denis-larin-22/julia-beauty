@@ -7,14 +7,7 @@ import {
     ref as storageRef,
     uploadBytes
 } from "firebase/storage";
-
-export interface IWorkInfo {
-    name: string,
-    description: string
-};
-
-export type ImagesArray = Array<File>;
-export type ChildFolders = 'before' | 'after';
+import { ChildFolders, IWorkInfo, ImagesArray } from "../types/definitions";
 
 // CREATE
 
@@ -121,7 +114,7 @@ export const getAllPreviewWorksWithImages = async () => {
 
         const listWithImages = await Promise.all(promises);
 
-        // Filter out any null entries (failed requests)
+        // Filter out any null entries (rejected requests)
         const filteredList = listWithImages.filter(item => item !== null);
 
         return filteredList;

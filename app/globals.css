@@ -12,7 +12,3 @@ body {
     font-size: 12px;
   }
 }
-
-.block {
-  width: clamp(320px 500px 750px);
-}

@@ -1,9 +1,8 @@
 'use client'
-
 import { motion, useInView } from "framer-motion";
 import { IAnimationValues } from "../../lib/types/definitions";
 import { _createAnimation } from "../../lib/_utils/_createFramerAnimation";
-import { RefObject, useRef } from "react";
+import { RefObject } from "react";
 
 interface IProps extends IAnimationValues {
     children: Readonly<React.ReactNode>,
@@ -22,8 +21,14 @@ export const AnimatedWrap = ({
     duration,
     styles
 }: IProps) => {
-
-    const [initialBlock, animateBlock, transitionBlock] = _createAnimation({ x, y, opacity, scale, delay, duration });
+    const [initialBlock, animateBlock, transitionBlock] = _createAnimation({
+        x,
+        y,
+        opacity,
+        scale,
+        delay,
+        duration
+    });
 
     if (refTriggerBlock) {
         const isInView = useInView(refTriggerBlock, { once: false });

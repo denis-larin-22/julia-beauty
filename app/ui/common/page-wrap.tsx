@@ -1,4 +1,3 @@
-// Adds head fixed background (<FixedBackground>), title (<TitleBlock>) and required margin indents 
 import FixedBackground from "./fixed-background"
 import TitleBlock from "./title-block"
 
@@ -9,13 +8,13 @@ interface IProps {
     wrapStyles?: string
 }
 
+// Adds head fixed background (<FixedBackground>), title (<TitleBlock>) and required margin indents 
 const PageWrap = ({
     children,
     srcBackground,
     title,
     wrapStyles
 }: IProps) => {
-
     return (
         <>
             <FixedBackground srcImage={srcBackground} />

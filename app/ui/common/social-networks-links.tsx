@@ -1,9 +1,5 @@
+import { IIconObj } from "../../lib/types/definitions";
 import { CallIcon, InstagramIcon, TelegramIcon } from "../assets/links-icons";
-
-interface IIconObj {
-    icon: JSX.Element;
-    href: string;
-}
 
 export const socialNetworksLinks: IIconObj[] = [
     {

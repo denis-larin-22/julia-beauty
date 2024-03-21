@@ -4,12 +4,7 @@ import { inter } from "../ui/fonts";
 import PageWrap from "../ui/common/page-wrap";
 import { InstagramIcon, MailIcon, TelegramIcon } from "../ui/assets/links-icons";
 import { Metadata } from "next";
-
-interface IIconObj {
-    name: string,
-    icon: JSX.Element,
-    href: string
-}
+import { IIconObj } from "../lib/types/definitions";
 
 export const metadata: Metadata = {
     title: 'Контакти | Julia Magic Beauty',
@@ -27,17 +22,17 @@ export const metadata: Metadata = {
 const Contacts = () => {
     const socialNetworksLinks: IIconObj[] = [
         {
-            name: 'Telegram',
+            title: 'Telegram',
             icon: <TelegramIcon color="black" />,
             href: 'https://t.me/jyliya24'
         },
         {
-            name: 'Instagram',
+            title: 'Instagram',
             icon: <InstagramIcon color="black" />,
             href: 'https://www.instagram.com/julia_magicbeautiful/?igsh=eXo5cGQxdDR5OWZh'
         },
         {
-            name: 'email',
+            title: 'email',
             icon: <MailIcon color="black" />,
             href: 'https://www.google.com/intl/ru/gmail/about/'
         },
@@ -49,7 +44,7 @@ const Contacts = () => {
             title="Контакти"
         >
             <section className="container grid grid-cols-1 md:grid-cols-2 gap-5 p-5 md:p-10">
-                <div className={`${inter.className} flex flex-col gap-5`}>
+                <div className="flex flex-col gap-5">
                     <Logo iconColor="black" style="self-center" />
 
                     <AnimatedWrap
@@ -86,7 +81,7 @@ const Contacts = () => {
                                     <a
                                         href={link.href}
                                         target="_blank"
-                                        title={`Посилання на ${link.name}`}
+                                        title={`Посилання на ${link.title}`}
                                     >
                                         {link.icon}
                                     </a>

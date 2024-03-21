@@ -1,6 +1,5 @@
 import { AnimationObjectsArray, IAnimationValues } from "../types/definitions"
 
-
 // Based on the animation values (y, x, opacity, scale, transition (duration, delay)) object, creates an array of the main objects "initial", "animate" and "transition" for the Framer Motion library
 export const _createAnimation = (animationValuesObject: IAnimationValues): AnimationObjectsArray => {
     const initial = {

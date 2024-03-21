@@ -66,4 +66,4 @@ export const WhatsappIcon = ({ color }: IProps) => (
             fill={color === 'black' ? 'black' : 'white'}
         />
     </svg>
-)
+);

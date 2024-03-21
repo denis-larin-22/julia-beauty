@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Logo } from "../assets/logo";
-import { CallIcon, InstagramIcon, MailIcon, TelegramIcon, ViberIcon } from "../assets/links-icons";
+import { CallIcon, InstagramIcon, MailIcon, TelegramIcon } from "../assets/links-icons";
 import { openSans } from "../fonts";
 
 interface ILinkObj {
@@ -12,7 +12,7 @@ const Footer = () => {
     const links: Array<ILinkObj> = [
         { name: 'Головна', href: '/' },
         { name: 'Про мене', href: '/about-me' },
-        { name: 'Мої роботи', href: '/gallery' },
+        { name: 'Галерея', href: '/gallery' },
         { name: 'Послуги', href: '/services-list' },
         { name: 'Відгуки', href: '/feedback' },
         { name: 'Контакти', href: '/contacts' },
@@ -22,8 +22,8 @@ const Footer = () => {
         <footer className="bg-t-black text-white">
             <div className="container flex flex-col sm:flex-row items-start sm:items-center justify-between py-4 sm:py-8">
                 <Logo style="text-white self-center sm:self-auto" iconColor="brown" />
-                <div className={`${openSans.className} flex flex-col sm:flex-row gap-10 lg:gap-44 mt-3 items-start sm:items-center`} >
-                    < nav className="flex flex-col gap-3">
+                <nav className={`${openSans.className} flex flex-col sm:flex-row gap-10 lg:gap-44 mt-3 items-start sm:items-center`} >
+                    <div className="flex flex-col gap-3">
                         {links.map((link) => (
                             <Link
                                 href={link.href}
@@ -33,7 +33,8 @@ const Footer = () => {
                                 {link.name}
                             </Link>
                         ))}
-                    </nav>
+                    </div>
+
                     <div className="flex flex-col gap-4">
                         <div className="flex items-center gap-4">
                             <a href="https://www.t.me/jyliya24" target="_blank">
@@ -52,7 +53,7 @@ const Footer = () => {
                             yarmakulia5@gmail.com
                         </a>
                     </div>
-                </div>
+                </nav>
             </div>
         </footer >
     )

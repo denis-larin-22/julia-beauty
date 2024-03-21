@@ -33,7 +33,7 @@ const Skills = () => {
     return (
         <article className=" bg-white">
             <div className="relative z-10 max-w-t-maxScreen mx-auto flex flex-col md:flex-row">
-                <article className="container max-w-[577px] my-6 lg:my-12 2xl:my-28">
+                <div className="container max-w-[577px] my-6 lg:my-12 2xl:my-28">
                     <AnimatedWrap
                         refTriggerBlock={ref}
                         x={'100px'}
@@ -68,7 +68,6 @@ const Skills = () => {
                         </p>
                     </AnimatedWrap>
 
-
                     <ul
                         ref={ref}
                         className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-2 gap-10"
@@ -89,7 +88,7 @@ const Skills = () => {
                             </li>
                         ))}
                     </ul>
-                </article>
+                </div>
                 <Image
                     src="/images/female-hairdresser-making.webp"
                     width={885}

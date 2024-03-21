@@ -1,6 +1,5 @@
 'use client'
 import Image from "next/image";
-import Link from "next/link";
 import AnimatedWrap from "../common/animated-wrap";
 import { useRef } from "react";
 import { motion } from "framer-motion";

@@ -1,21 +1,20 @@
+import { IIconObj } from "../../lib/types/definitions";
 import { InstagramIcon, MailIcon, TelegramIcon } from "../assets/links-icons";
-
-interface IIconObj {
-    icon: JSX.Element;
-    href: string;
-}
 
 const Contacts = () => {
     const socialNetworksLinks: IIconObj[] = [
         {
+            title: 'Telegram',
             icon: <TelegramIcon color="black" />,
             href: 'https://t.me/jyliya24'
         },
         {
+            title: 'Instagram',
             icon: <InstagramIcon color="black" />,
             href: 'https://www.instagram.com/julia_magicbeautiful/?igsh=eXo5cGQxdDR5OWZh'
         },
         {
+            title: 'eMail',
             icon: <MailIcon color="black" />,
             href: 'https://www.google.com/intl/ru/gmail/about/'
         },
@@ -35,12 +34,12 @@ const Contacts = () => {
                             <li
                                 key={index}
                                 className="hover:scale-125 duration-150"
+                                title={link.title}
                             >
                                 <a href={link.href} target="_blank">{link.icon}</a>
                             </li>
                         ))}
                     </ul>
-
                 </div>
                 <div className="max-w-[600px] h-[250px] md:h-[450px]">
                     <iframe

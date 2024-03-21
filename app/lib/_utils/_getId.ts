@@ -10,4 +10,4 @@ export const _getId = (): string => {
     }
 
     return randomId;
-}
+};

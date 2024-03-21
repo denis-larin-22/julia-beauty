@@ -1,18 +1,13 @@
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "./firebase-config";
+import { ICommentObj } from "../types/definitions";
 
-export interface CommentObj {
-    id: string,
-    name: string,
-    comment: string
-}
-
-export const getCommentsFromFirestoreDB = async (): Promise<CommentObj[]> => {
+export const getCommentsFromFirestoreDB = async (): Promise<ICommentObj[]> => {
     try {
         const commentsCollectionRef = collection(db, "feedback");
         const data = await getDocs(commentsCollectionRef);
 
-        const commentsArray: CommentObj[] = data.docs.map((doc) => ({
+        const commentsArray: ICommentObj[] = data.docs.map((doc) => ({
             id: doc.id,
             name: doc.data().name,
             comment: doc.data().comment

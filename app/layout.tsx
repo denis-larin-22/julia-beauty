@@ -9,7 +9,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="uk">
       <body className={`${inter.className} antialiased min-h-screen flex flex-col justify-between`}>
         <Header />
         <div className="grow">

@@ -28,9 +28,7 @@ const Header = () => {
     ];
 
     return (
-        <header
-            className="bg-white sticky top-0 z-50 md:static"
-        >
+        <header className="bg-white sticky top-0 z-50 md:static">
             <div className={`bg-t-brown text-white ${inter.className} font-medium text-xs md:text-sm leading-[1.2em]`}>
 
                 {/* ontacts desktop*/}
@@ -116,7 +114,7 @@ const Header = () => {
                                     <Link
                                         href={link.href}
                                         onClick={() => setToggleNavbar(false)}
-                                        className={`uppercase text-t-md hover:text-t-brown-strong ${pathname === link.href && 'text-t-brown'}`}
+                                        className={`uppercase text-t-md hover:text-t-brown-strong ${pathname === link.href ? 'text-t-brown' : ''}`}
                                     >
                                         {link.name}
                                     </Link>

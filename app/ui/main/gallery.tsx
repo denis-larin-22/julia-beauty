@@ -32,7 +32,7 @@ const Gallery = () => {
                                 src={path}
                                 width={200}
                                 height={200}
-                                alt="Photos of works from the gallery"
+                                alt="Фотографії робіт з галереї"
                                 className="h-32 sm:h-[200px] w-32 sm:w-[200px] object-cover group-hover:scale-105 duration-150"
                             />
                         </li>

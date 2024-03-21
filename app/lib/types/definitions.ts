@@ -1,5 +1,11 @@
-// Icons color in the links-icons
+// ICONS
 export type SvgIconColor = 'black' | 'white';
+
+export interface IIconObj {
+    title: string,
+    icon: JSX.Element;
+    href: string;
+}
 
 // CREATE FRAMER ANIMATION FUNCTION TYPES/INTARFACES
 export interface IAnimationValues {
@@ -31,3 +37,31 @@ export interface ITransitionObject {
 }
 
 export type AnimationObjectsArray = [IInitialObject, IAnimateObject, ITransitionObject];
+// FIREBASE GALLERY LIST
+
+export interface IWorkInfo {
+    name: string,
+    description: string
+};
+
+export type ImagesArray = Array<File>;
+export type ChildFolders = 'before' | 'after';
+
+// FIREBASE SERVICES LIST 
+
+export interface IServiceItem {
+    room: 'male' | 'female',
+    name: string,
+    description: string,
+    price: string
+};
+
+export type ServiceList = Array<IServiceItem>;
+
+// FIREBASE FEEDBACK
+
+export interface ICommentObj {
+    id: string,
+    name: string,
+    comment: string
+}

@@ -1,5 +1,4 @@
 'use client'
-
 import { useState } from "react";
 import { syne } from "../fonts";
 
@@ -35,7 +34,11 @@ const Carousel = ({ srcImagesArray, wrapStyles }: IProps) => {
 
     return (
         <div
-            className={fullSizeImage ? "fixed top-0 left-0 z-50 h-screen w-screen flex items-center justify-center bg-[#000000ce]" : `relative flex items-center justify-center gap-1 md:gap-4 drop-shadow-2xl ${wrapStyles}`}
+            className={fullSizeImage ?
+                "fixed top-0 left-0 z-50 h-screen w-screen flex items-center justify-center bg-[#000000ce]"
+                :
+                `relative flex items-center justify-center gap-1 md:gap-4 drop-shadow-2xl ${wrapStyles}`
+            }
             onClick={(e) => {
                 if (e.currentTarget === e.target) setFullSizeImage(false);
             }}
@@ -46,14 +49,18 @@ const Carousel = ({ srcImagesArray, wrapStyles }: IProps) => {
             >
                 {'<'}
             </button>
-            <div className={`${fullSizeImage ? 'w-[80vw] md:w-fit h-fit z-10' : 'w-96 max-h-[600px]'} flex items-center justify-center overflow-hidden rounded-xl`}>
+            <div className={`flex items-center justify-center overflow-hidden rounded-xl ${fullSizeImage ?
+                "w-[80vw] md:w-fit h-fit z-10"
+                :
+                'w-96 max-h-[600px]'
+                }`}>
                 {srcImagesArray.map((path, index) => (
                     <img
                         key={index}
                         width={384}
                         height={600}
                         src={path}
-                        alt="Фото робіт з галереї"
+                        alt="Фото роботи з галереї"
                         title="Відкрити на весь екран"
                         onClick={() => setFullSizeImage(true)}
                         className={`h-fit max-h-screen w-full object-contain cursor-pointer ${currentIndexImage === index ? 'inline' : 'hidden'}`}

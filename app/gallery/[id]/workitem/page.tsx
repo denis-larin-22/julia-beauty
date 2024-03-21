@@ -38,16 +38,16 @@ export default async function WorkItem({ params }: { params: { id: string } }) {
                     <p className="text-center text-t-brown-light text-4xl md:text-6xl mb-4">результат</p>
                     <Carousel srcImagesArray={imagesAfter} />
                 </div>
-                {imagesBefore.length !== 0 && <div className="flex flex-col">
-                    <p className="text-center text-t-brown-light text-4xl md:text-6xl mb-4">до</p>
-                    <Carousel srcImagesArray={imagesBefore} />
-                </div>}
+                {imagesBefore.length !== 0 &&
+                    <div className="flex flex-col">
+                        <p className="text-center text-t-brown-light text-4xl md:text-6xl mb-4">до</p>
+                        <Carousel srcImagesArray={imagesBefore} />
+                    </div>}
 
                 <div className="flex flex-col bg-t-brown-light p-8">
                     <p className="text-t-xl text-t-brown">Опис:</p>
                     <p>{workInfo.description}</p>
                 </div>
-
 
                 <div className="flex flex-col gap-5 flex-wrap mt-5 self-end">
                     {[{ href: '/contacts', text: 'Записатися' }, { href: '/gallery', text: 'Галерея' }].map((link) => (

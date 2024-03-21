@@ -1,14 +1,6 @@
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "./firebase-config";
-
-export interface IServiceItem {
-    room: 'male' | 'female',
-    name: string,
-    description: string,
-    price: string
-};
-
-export type ServiceList = Array<IServiceItem>;
+import { ServiceList } from "../types/definitions";
 
 export const getServiceListFromFirestoreDB = async (): Promise<ServiceList> => {
     try {

@@ -1,7 +1,7 @@
 import { Inter, Syne, Open_Sans } from 'next/font/google';
 
 export const inter = Inter({
-    subsets: ['latin', 'cyrillic'],
+    subsets: ['cyrillic'],
     weight: ['400', '600', '700']
 });
 

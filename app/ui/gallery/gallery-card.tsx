@@ -1,13 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
 
-interface IWorkCard {
-    id: string;
-    name: string;
-    image: string;
+interface IProps {
+    work: {
+        id: string;
+        name: string;
+        image: string;
+    }
 }
 
-export default function GalleryCard({ work }: { work: IWorkCard }) {
+export default function GalleryCard({ work }: IProps) {
     return (
         <div className="group relative h-full rounded-xl shadow-xl overflow-hidden flex flex-col hover:shadow-md hover:shadow-black">
             <Image
@@ -15,7 +17,7 @@ export default function GalleryCard({ work }: { work: IWorkCard }) {
                 height={256}
                 src={work.image}
                 loading="lazy"
-                alt="Фото роботі із галереї"
+                alt={`Фото роботи: ${work.name}`}
                 className="w-full h-full rounded-xl object-cover brightness-75 group-hover:brightness-50 all duration-150"
             />
             <div className="flex items-center justify-center h-full absolute inset-0">

@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { inter } from "./ui/fonts";
 import TLink from "./ui/common/link";
 
