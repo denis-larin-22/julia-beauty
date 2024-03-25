@@ -2,6 +2,7 @@ import "./globals.css";
 import { inter } from "./ui/fonts";
 import Header from "./ui/common/header";
 import Footer from "./ui/common/footer";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export default function RootLayout({
   children,
@@ -14,6 +15,7 @@ export default function RootLayout({
         <Header />
         <div className="grow">
           {children}
+          <SpeedInsights />
         </div>
         <Footer />
       </body>
