@@ -1,4 +1,3 @@
-import { inter } from "../ui/fonts";
 import PageWrap from "../ui/common/page-wrap";
 import TLink from "../ui/common/link";
 import { getServiceListFromFirestoreDB } from "../lib/firebase/services-list";

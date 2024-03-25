@@ -1,6 +1,5 @@
 import AnimatedWrap from "../ui/common/animated-wrap";
 import { Logo } from "../ui/assets/logo";
-import { inter } from "../ui/fonts";
 import PageWrap from "../ui/common/page-wrap";
 import { InstagramIcon, MailIcon, TelegramIcon } from "../ui/assets/links-icons";
 import { Metadata } from "next";

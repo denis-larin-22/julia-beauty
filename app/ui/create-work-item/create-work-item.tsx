@@ -1,7 +1,8 @@
 'use client'
 import { ChangeEvent, useState } from "react";
-import { IWorkInfo, ImagesArray, addImagesToStorage, addNewWorkToFirestoreDB } from "../../lib/firebase/gallery";
+import { addImagesToStorage, addNewWorkToFirestoreDB } from "../../lib/firebase/gallery";
 import { _getId } from "../../lib/_utils/_getId";
+import { IWorkInfo, ImagesArray } from "../../lib/types/definitions";
 
 export default function CreateWorkItem() {
     const initInputsWorkInfo: IWorkInfo = {
